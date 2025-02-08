@@ -6,9 +6,13 @@ import ViewMenu from "./components/ViewMenu";
 import MultiDelivery from "./components/MultiDelivery";
 import Promos from "./components/Promos";
 import GiftCard from "./components/GiftCard";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/delivery" element={<Delivery />} />
