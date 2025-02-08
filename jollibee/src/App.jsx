@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Delivery from "./components/Delivery";
 import Location from "./components/Location";
 import ViewMenu from "./components/ViewMenu";
