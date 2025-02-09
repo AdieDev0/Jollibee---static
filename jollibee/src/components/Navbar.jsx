@@ -25,23 +25,7 @@ const Navbar = () => {
                   href="#"
                   className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
                 >
-                  Account settings
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
-                >
-                  Support
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
-                >
-                  License
+                  View Menu
                 </a>
               </MenuItem>
               <form action="#" method="POST">
@@ -50,7 +34,7 @@ const Navbar = () => {
                     type="submit"
                     className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
                   >
-                    Sign out
+                    Multi-Delivery
                   </button>
                 </MenuItem>
               </form>
