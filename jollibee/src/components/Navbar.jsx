@@ -4,12 +4,12 @@ import { FaAngleDown } from "react-icons/fa6";
 const Navbar = () => {
   return (
     <div className="bg-[#D6001C] px-44 py-4">
-      <ul className="flex justify-end items-center gap-5">
-        <li className="text-xl font-bold text-white">Delivery</li>
-        <li className="text-xl font-bold text-white">Location</li>
+      <ul className="flex justify-end items-center gap-8">
+        <li className="text-lg font-bold text-white">Delivery</li>
+        <li className="text-lg font-bold text-white">Location</li>
         <Menu as="div" className="relative inline-block">
           <div className="items-center">
-            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-bold text-xl text-white">
+            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-bold text-lg text-white">
               Menu
               <FaAngleDown aria-hidden="true" className="size-5 text-white" />
             </MenuButton>
@@ -43,7 +43,7 @@ const Navbar = () => {
         </Menu>
         <Menu as="div" className="relative inline-block ">
           <div>
-            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-bold text-xl text-white">
+            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-bold text-lg text-white">
               Promotion
               <FaAngleDown
                 aria-hidden="true"
@@ -94,7 +94,7 @@ const Navbar = () => {
             </div>
           </MenuItems>
         </Menu>
-        <button className="bg-orange-400 text-white font-bold text-xl rounded-full px-5 py-3 shadow-lg">
+        <button className="bg-orange-400 text-white font-bold text-lg rounded-full px-6 py-3 shadow-lg">
           Order Now
         </button>
       </ul>
