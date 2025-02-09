@@ -3,7 +3,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { FaAngleDown } from "react-icons/fa6";
 const Navbar = () => {
   return (
-    <div className="bg-[#D6001C]">
+    <div className="bg-[#D6001C] px-44 py-4">
       <ul className="flex justify-end items-center gap-4">
         <li className="text-xl font-bold text-white">Delivery</li>
         <li className="text-xl font-bold text-white">Location</li>
