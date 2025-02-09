@@ -7,7 +7,7 @@ const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <nav className="bg-[#D6001C] px-6 md:px-44 py-4 flex justify-end items-center">
+    <nav className="bg-[#D6001C] px-6 md:px-44 py-3 flex justify-end items-center border-b-4 border-b-yellow-400">
       {/* Mobile Menu Button */}
       <button
         className="text-white md:hidden text-2xl"
@@ -42,27 +42,17 @@ const Navbar = () => {
         <DropdownMenu title="Promotion">
           <MenuItem>
             <a href="#" className="block px-4 py-2 text-gray-700">
-              Account settings
+              Promos
             </a>
           </MenuItem>
           <MenuItem>
             <a href="#" className="block px-4 py-2 text-gray-700">
-              Support
+            Gift Cards
             </a>
-          </MenuItem>
-          <MenuItem>
-            <a href="#" className="block px-4 py-2 text-gray-700">
-              License
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <button className="block w-full text-left px-4 py-2 text-gray-700">
-              Sign out
-            </button>
           </MenuItem>
         </DropdownMenu>
 
-        <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg rounded-full px-6 py-3 shadow-lg cursor-pointer">
+        <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg rounded-full px-8 py-3 shadow-lg cursor-pointer">
           Order Now
         </button>
       </ul>
