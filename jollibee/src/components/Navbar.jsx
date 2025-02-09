@@ -4,10 +4,10 @@ import { FaAngleDown } from "react-icons/fa6";
 const Navbar = () => {
   return (
     <div className="bg-[#D6001C] px-44 py-4">
-      <ul className="flex justify-end items-center gap-4">
+      <ul className="flex justify-end items-center gap-5">
         <li className="text-xl font-bold text-white">Delivery</li>
         <li className="text-xl font-bold text-white">Location</li>
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block">
           <div className="items-center">
             <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-bold text-xl text-white">
               Menu
@@ -57,7 +57,7 @@ const Navbar = () => {
             </div>
           </MenuItems>
         </Menu>
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block ">
           <div>
             <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-bold text-xl text-white">
               Promotion
