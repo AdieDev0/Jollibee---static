@@ -8,7 +8,7 @@ const Home = () => {
       {/* Desktop Banner */}
       <div className="hidden md:block relative">
         <img src={HomeBanner} alt="Home Banner" className="w-full" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full max-w-2xl px-6">
+        <div className="absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full max-w-2xl px-6">
           <h1 className="text-6xl font-bold">Bringing joy to you</h1>
           <h2 className="text-3xl font-bold mt-4">
             Have your Jollibee favorites delivered right to your doorstep!
@@ -26,7 +26,7 @@ const Home = () => {
           alt="Home Banner Mobile"
           className="w-full"
         />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-6">
+        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-6">
           <h1 className="text-4xl font-bold">Bringing joy to you</h1>
           <h2 className="text-2xl font-bold mt-4">
             Have your Jollibee favorites delivered right to your doorstep!
