@@ -7,9 +7,10 @@ const Navbar = () => {
       <ul className="flex justify-end items-center gap-8">
         <li className="text-lg font-bold text-white">Delivery</li>
         <li className="text-lg font-bold text-white">Location</li>
+        {/* FIRST MENU */}
         <Menu as="div" className="relative inline-block">
           <div className="items-center">
-            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-bold text-lg text-white">
+            <MenuButton className="inline-flex w-full justify-center gap-x-1.5  py-2 font-bold text-lg text-white">
               Menu
               <FaAngleDown aria-hidden="true" className="size-5 text-white" />
             </MenuButton>
@@ -41,9 +42,10 @@ const Navbar = () => {
             </div>
           </MenuItems>
         </Menu>
+        {/* SECOND MENU */}
         <Menu as="div" className="relative inline-block ">
           <div>
-            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 font-bold text-lg text-white">
+            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 py-2 font-bold text-lg text-white">
               Promotion
               <FaAngleDown
                 aria-hidden="true"
