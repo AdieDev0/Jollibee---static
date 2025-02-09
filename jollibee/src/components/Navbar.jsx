@@ -7,10 +7,10 @@ const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <nav className="bg-[#D6001C] px-6 md:px-44 py-3 flex justify-end items-center border-b-4 border-b-yellow-400">
+    <nav className="bg-[#D6001C] px-6 md:px-44 py-5 md:py-3 flex justify-end items-center border-b-4 border-b-yellow-400">
       {/* Mobile Menu Button */}
       <button
-        className="text-white md:hidden text-2xl"
+        className="text-white md:hidden text-3xl"
         onClick={() => setSidebarOpen(true)}
       >
         <FaBars />
@@ -47,7 +47,7 @@ const Navbar = () => {
           </MenuItem>
           <MenuItem>
             <a href="#" className="block px-4 py-2 text-gray-700">
-            Gift Cards
+              Gift Cards
             </a>
           </MenuItem>
         </DropdownMenu>
