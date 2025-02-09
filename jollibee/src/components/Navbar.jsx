@@ -5,12 +5,16 @@ const Navbar = () => {
   return (
     <div className="bg-[#D6001C] px-44 py-4">
       <ul className="flex justify-end items-center gap-8">
-        <li className="text-lg font-bold text-white">Delivery</li>
-        <li className="text-lg font-bold text-white">Location</li>
+        <li className="text-lg font-bold text-white cursor-pointer">
+          Delivery
+        </li>
+        <li className="text-lg font-bold text-white cursor-pointer">
+          Location
+        </li>
         {/* FIRST MENU */}
         <Menu as="div" className="relative inline-block">
           <div>
-            <MenuButton className="inline-flex w-full items-center justify-center gap-x-1.5  py-2 font-bold text-lg text-white">
+            <MenuButton className="inline-flex w-full items-center justify-center gap-x-1.5 py-2 font-bold text-lg text-white cursor-pointer">
               Menu
               <FaAngleDown aria-hidden="true" className="size-5 text-white" />
             </MenuButton>
@@ -33,7 +37,7 @@ const Navbar = () => {
                 <MenuItem>
                   <button
                     type="submit"
-                    className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
+                    className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden cursor-pointer"
                   >
                     Multi-Delivery
                   </button>
@@ -45,7 +49,7 @@ const Navbar = () => {
         {/* SECOND MENU */}
         <Menu as="div" className="relative inline-block ">
           <div>
-            <MenuButton className="inline-flex w-full items-center justify-center gap-x-1.5 py-2 font-bold text-lg text-white">
+            <MenuButton className="inline-flex w-full items-center justify-center gap-x-1.5 py-2 font-bold text-lg text-white cursor-pointer">
               Promotion
               <FaAngleDown
                 aria-hidden="true"
@@ -96,7 +100,7 @@ const Navbar = () => {
             </div>
           </MenuItems>
         </Menu>
-        <button className="bg-orange-400 text-white font-bold text-lg rounded-full px-6 py-3 shadow-lg">
+        <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg rounded-full px-6 py-3 shadow-lg cursor-pointer">
           Order Now
         </button>
       </ul>
