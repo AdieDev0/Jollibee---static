@@ -7,7 +7,7 @@ const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <nav className="bg-[#D6001C] px-6 md:px-44 py-4 flex justify-between items-center">
+    <nav className="bg-[#D6001C] px-6 md:px-44 py-4 flex justify-end items-center">
       {/* Mobile Menu Button */}
       <button
         className="text-white md:hidden text-2xl"
