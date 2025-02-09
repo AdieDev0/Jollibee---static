@@ -1,5 +1,6 @@
 import React from "react";
 import HomeBanner from "../assets/2021/HomeBanner.png";
+import HomeBannerMobile from "../assets/2022/jabee/HomeBannerMobile.png";
 const Home = () => {
   return (
     <div>
@@ -10,10 +11,14 @@ const Home = () => {
           <h2 className="text-3xl font-bold ">
             Have your Jollibee favorites delivered right to your doorstep!
           </h2>
-          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg rounded-full px-8 py-3 shadow-lg cursor-pointer mx-auto">
+          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-3xl rounded-full px-8 py-4 shadow-lg cursor-pointer mx-auto">
             Order Now
           </button>
         </div>
+      </div>
+      {/* FOR MOBILE MODE */}
+      <div>
+
       </div>
     </div>
   );
