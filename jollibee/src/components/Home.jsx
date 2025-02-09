@@ -21,7 +21,11 @@ const Home = () => {
 
       {/* Mobile Banner */}
       <div className="block md:hidden relative">
-        <img src={HomeBannerMobile} alt="Home Banner Mobile" className="w-full" />
+        <img
+          src={HomeBannerMobile}
+          alt="Home Banner Mobile"
+          className="w-full"
+        />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-6">
           <h1 className="text-4xl font-bold">Bringing joy to you</h1>
           <h2 className="text-2xl font-bold mt-4">
