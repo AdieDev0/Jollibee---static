@@ -69,8 +69,8 @@ const Navbar = () => {
 
       {/* Mobile Sidebar */}
       {sidebarOpen && (
-        <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex">
-          <div className="bg-white w-64 h-full p-5 shadow-lg relative">
+        <div className="fixed inset-0 z-50 bg-black/40 flex">
+          <div className="bg-white w-80 h-full p-5 shadow-lg relative">
             <button
               className="absolute top-4 right-4 text-gray-600"
               onClick={() => setSidebarOpen(false)}
