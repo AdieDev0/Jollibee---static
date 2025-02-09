@@ -14,7 +14,7 @@ const Navbar = () => {
                 Menu
                 <FaAngleDown
                   aria-hidden="true"
-                  className="size-5 text-gray-400"
+                  className="size-5 text-white"
                 />
               </MenuButton>
             </div>
@@ -67,7 +67,7 @@ const Navbar = () => {
                 Promotion
                 <FaAngleDown
                   aria-hidden="true"
-                  className="-mr-1 size-5 text-gray-400"
+                  className="-mr-1 size-5 text-white"
                 />
               </MenuButton>
             </div>
