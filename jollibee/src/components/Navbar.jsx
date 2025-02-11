@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { FaAngleDown, FaBars } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -59,7 +60,12 @@ const Navbar = () => {
 
       {/* Mobile Sidebar */}
       {sidebarOpen && (
-        <div className="fixed inset-0 z-50 bg-black/40 flex">
+        <motion.div
+          initial={{ opacity: 0, x: "-100%" }}
+          animate={{ opacity: 1, x: "0%" }}
+          exit={{ opacity: 0, x: "-100%" }}
+          className="fixed inset-0 z-50 bg-black/40 flex"
+        >
           <div className="bg-white w-80 h-full p-5 shadow-lg relative">
             <button
               className="absolute top-4 right-4 text-gray-600"
@@ -77,7 +83,7 @@ const Navbar = () => {
               </button>
             </ul>
           </div>
-        </div>
+        </motion.div>
       )}
     </nav>
   );
@@ -90,7 +96,13 @@ const DropdownMenu = ({ title, children }) => {
         {title}
         <FaAngleDown className="size-5 text-white" />
       </MenuButton>
-      <MenuItems className="absolute right-0 z-10 mt-2 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5">
+      <MenuItems
+        as={motion.div}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        className="absolute right-0 z-10 mt-2 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5"
+      >
         <div className="py-1">{children}</div>
       </MenuItems>
     </Menu>
