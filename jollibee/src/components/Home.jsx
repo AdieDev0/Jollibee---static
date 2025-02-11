@@ -81,6 +81,19 @@ const Home = () => {
 
       {/* DIVIDER */}
       <div className="h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
+
+      {/* EXCLUSIVE PROMOS */}
+      <div>
+        <h1> Exclusive Promos</h1>
+        <div>
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+        <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-2xl rounded-full px-6 py-3 shadow-lg mt-6 cursor-pointer">
+          See All Promos
+        </button>
+      </div>
     </>
   );
 };
