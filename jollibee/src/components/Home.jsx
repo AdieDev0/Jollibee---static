@@ -120,7 +120,25 @@ const Home = () => {
       {/* FEATURED MENU ITEMS */}
       <div className="py-12 bg-[#FFEAB8]">
         <h1 className="text-center text-4xl font-bold">Featured Menu Items</h1>
-        <div className="">
+        <div className="justify-between">
+          <div className="bg-red-600 w-90 h-full p-5 rounded-3xl">
+            <p className="text-white font-bold text-xl w-80 mb-5">
+              <span className="text-white font-bold text-3xl">
+                Chickenjoy Bucket
+              </span>{" "}
+              Philippines' best-tasting crispylicious, jucylicious.
+            </p>
+            <img src={ChickenJoy} alt="" className="mx-auto" />
+          </div>
+          <div className="bg-red-600 w-90 h-full p-5 rounded-3xl">
+            <p className="text-white font-bold text-xl w-80 mb-5">
+              <span className="text-white font-bold text-3xl">
+                Chickenjoy Bucket
+              </span>{" "}
+              Philippines' best-tasting crispylicious, jucylicious.
+            </p>
+            <img src={ChickenJoy} alt="" className="mx-auto" />
+          </div>
           <div className="bg-red-600 w-90 h-full p-5 rounded-3xl">
             <p className="text-white font-bold text-xl w-80 mb-5">
               <span className="text-white font-bold text-3xl">
