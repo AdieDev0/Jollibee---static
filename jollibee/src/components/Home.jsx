@@ -45,22 +45,34 @@ const Home = () => {
 
       {/* 3 CIRCLE */}
       <div className="px-6 md:px-24 lg:px-64 py-12">
-        <div className="flex flex-wrap justify-between">
+        <div className="flex justify-between">
           <div className="w-full md:w-1/3 items-center text-center mb-8 md:mb-0">
-            <img src={DownloadApp} alt="" className="mx-auto" />
-            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5">
+            <img
+              src={DownloadApp}
+              alt=""
+              className="mx-auto transition-transform transform hover:scale-105"
+            />
+            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5 transition-colors duration-300 hover:text-red-600">
               Download the App
             </h1>
           </div>
           <div className="w-full md:w-1/3 items-center text-center mb-8 md:mb-0">
-            <img src={EightSeven} alt="" className="mx-auto" />
-            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5">
+            <img
+              src={EightSeven}
+              alt=""
+              className="mx-auto transition-transform transform hover:scale-105"
+            />
+            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5 transition-colors duration-300 hover:text-red-600">
               #87000
             </h1>
           </div>
           <div className="w-full md:w-1/3 items-center text-center">
-            <img src={OrderPickup} alt="" className="mx-auto" />
-            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5">
+            <img
+              src={OrderPickup}
+              alt=""
+              className="mx-auto transition-transform transform hover:scale-105"
+            />
+            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5 transition-colors duration-300 hover:text-red-600">
               Order & Pick Up
             </h1>
           </div>
