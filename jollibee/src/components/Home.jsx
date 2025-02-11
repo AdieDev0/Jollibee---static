@@ -11,7 +11,8 @@ import burger from "../assets/2021/burger.png";
 import Spag from "../assets/2022/food/Spag.png";
 import ChickenJoy from "../assets/2021/ChickenJoy.png";
 import BeefSteak from "../assets/2022/food/BeefSteak.png";
-
+import WhatWeDo from "../assets/2021/WhatWeDo.png";
+import WhatWeStandFor from "../assets/2022/jabee/WhatWeStandFor.png";
 const Home = () => {
   return (
     <>
