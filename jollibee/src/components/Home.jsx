@@ -1,6 +1,9 @@
 import React from "react";
 import HomeBanner from "../assets/2021/HomeBanner.png";
 import HomeBannerMobile from "../assets/2022/jabee/HomeBannerMobile.png";
+import DownloadApp from "../assets/2021/DownloadApp.png";
+import EightSeven from "../assets/2021/EightSeven.png";
+import OrderPickup from "../assets/2021/OrderPickup.png";
 
 const Home = () => {
   return (
@@ -36,6 +39,24 @@ const Home = () => {
             <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-2xl rounded-full px-6 py-3 shadow-lg mt-6 cursor-pointer">
               Order Now
             </button>
+          </div>
+        </div>
+      </div>
+
+      {/* 3 CIRCLE */}
+      <div className="px-64 py-12">
+        <div className="flex justify-between">
+          <div className="items-center text-center">
+            <img src={DownloadApp} alt="" className="mx-auto" />
+            <h1 className="font-bold text-3xl mt-5">Download the App</h1>
+          </div>
+          <div className="items-center text-center">
+            <img src={EightSeven} alt="" className="mx-auto" />
+            <h1 className="font-bold text-3xl mt-5">#87000</h1>
+          </div>
+          <div className="items-center text-center">
+            <img src={OrderPickup} alt="" className="mx-auto" />
+            <h1 className="font-bold text-3xl mt-5">Order & Pick Up</h1>
           </div>
         </div>
       </div>
