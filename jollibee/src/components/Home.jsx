@@ -243,6 +243,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* DIVIDER */}
+      <div className="h-1 border-t-0 bg-orange-400 w-full"></div>
     </>
   );
 };
