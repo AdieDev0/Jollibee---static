@@ -195,14 +195,14 @@ const Home = () => {
       </div>
 
       {/* 2 CARDS */}
-      <div>
+      <div className="flex justify-between px-4 sm:px-8 md:px-16 lg:px-68 py-12">
         <div className="flex justify-between">
           <div className="w-sm items-center grid gap-2 relative">
             {/* Offset Background Shape */}
             <div className="absolute top-5 left-30 h-55 w-55 bg-yellow-600 rounded-2xl"></div>
             {/* Image */}
             <img
-              src={WhatWeDo}
+              src={WhatWeStandFor}
               alt=""
               className="mx-auto rounded-2xl relative"
             />
@@ -214,6 +214,30 @@ const Home = () => {
               <p className="text-center text-lg font-oswald text-black/80">
                 Jollibee's Mission is to serve great-tasting food, bringing the
                 joy of eating to everyone.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-between">
+          <div className="w-sm items-center grid gap-2 relative">
+            {/* Offset Background Shape */}
+            <div className="absolute top-5 right-30 h-55 w-55 bg-red-600 rounded-2xl"></div>
+            {/* Image */}
+            <img
+              src={WhatWeDo}
+              alt=""
+              className="mx-auto rounded-2xl relative"
+            />
+
+            {/* Text Content */}
+            <div className="grid gap-4 mt-8">
+              <h1 className="text-center font-bold text-3xl">
+                What We Stand For
+              </h1>
+              <div className="h-1 border-t-0 w-79 bg-red-600 mx-auto"></div>
+              <p className="text-center text-lg font-oswald text-black/80">
+                Jollibee is a family-centric brand that promotes family values
+                and togetherness and espouses Filipino pride.
               </p>
             </div>
           </div>
