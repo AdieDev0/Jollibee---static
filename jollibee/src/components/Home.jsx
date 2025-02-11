@@ -13,7 +13,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold mt-4">
             Have your Jollibee favorites delivered right to your doorstep!
           </h2>
-          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-3xl rounded-full px-8 py-4 shadow-lg mt-6">
+          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-3xl rounded-full px-8 py-4 shadow-lg mt-6 cursor-pointer">
             Order Now
           </button>
         </div>
@@ -31,7 +31,7 @@ const Home = () => {
           <h2 className="text-2xl font-bold mt-4">
             Have your Jollibee favorites delivered right to your doorstep!
           </h2>
-          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-2xl rounded-full px-6 py-3 shadow-lg mt-6">
+          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-2xl rounded-full px-6 py-3 shadow-lg mt-6 cursor-pointer">
             Order Now
           </button>
         </div>
