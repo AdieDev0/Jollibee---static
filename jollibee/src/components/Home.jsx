@@ -44,24 +44,30 @@ const Home = () => {
       </div>
 
       {/* 3 CIRCLE */}
-      <div className="px-64 py-12">
-        <div className="flex justify-between">
-          <div className="items-center text-center">
+      <div className="px-6 md:px-24 lg:px-64 py-12">
+        <div className="flex flex-wrap justify-between">
+          <div className="w-full md:w-1/3 items-center text-center mb-8 md:mb-0">
             <img src={DownloadApp} alt="" className="mx-auto" />
-            <h1 className="font-bold text-3xl mt-5">Download the App</h1>
+            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5">
+              Download the App
+            </h1>
           </div>
-          <div className="items-center text-center">
+          <div className="w-full md:w-1/3 items-center text-center mb-8 md:mb-0">
             <img src={EightSeven} alt="" className="mx-auto" />
-            <h1 className="font-bold text-3xl mt-5">#87000</h1>
+            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5">
+              #87000
+            </h1>
           </div>
-          <div className="items-center text-center">
+          <div className="w-full md:w-1/3 items-center text-center">
             <img src={OrderPickup} alt="" className="mx-auto" />
-            <h1 className="font-bold text-3xl mt-5">Order & Pick Up</h1>
+            <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mt-5">
+              Order & Pick Up
+            </h1>
           </div>
         </div>
       </div>
       {/* DIVIDER */}
-      <div className="my-8 h-0.5 border-t-0 bg-black/20 w-6xl mx-auto"></div>
+      <div className="my-8 h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
     </>
   );
 };
