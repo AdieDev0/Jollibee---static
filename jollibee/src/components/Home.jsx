@@ -197,10 +197,25 @@ const Home = () => {
       {/* 2 CARDS */}
       <div>
         <div className="flex justify-between">
-          <div>
-            <img src="" alt="" />
-            <div className="h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
-            <p></p>
+          <div className="w-sm items-center grid gap-2 relative">
+            {/* Offset Background Shape */}
+            <div className="absolute top-5 left-30 h-55 w-55 bg-yellow-600 rounded-2xl"></div>
+            {/* Image */}
+            <img
+              src={WhatWeDo}
+              alt=""
+              className="mx-auto rounded-2xl relative"
+            />
+
+            {/* Text Content */}
+            <div className="grid gap-4 mt-8">
+              <h1 className="text-center font-bold text-3xl">What We Do</h1>
+              <div className="h-1 border-t-0 w-16 bg-orange-400 mx-auto"></div>
+              <p className="text-center text-lg">
+                Jollibee's Mission is to serve great-tasting food, bringing the
+                joy of eating to everyone.
+              </p>
+            </div>
           </div>
         </div>
       </div>
