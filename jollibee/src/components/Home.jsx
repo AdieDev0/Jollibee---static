@@ -7,6 +7,9 @@ import OrderPickup from "../assets/2021/OrderPickup.png";
 import JollyTreats from "../assets/2025/JollyTreats.jpg";
 import JanuaryJoys from "../assets/2024/JanuaryJoys.jpg";
 import JoyZone from "../assets/2024/JoyZone.jpg";
+import burger from "../assets/2021/burger.png";
+import Spag from "../assets/2022/food/Spag.png";
+import ChickenJoy from "../assets/2021/ChickenJoy.png";
 
 const Home = () => {
   return (
@@ -108,9 +111,25 @@ const Home = () => {
           />
         </div>
         <div className="flex justify-center mt-6">
-          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg sm:text-xl md:text-2xl rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg cursor-pointer">
+          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg sm:text-xl md:text-3xl rounded-full px-4 sm:px-6 py-2 md:py-4 shadow-lg cursor-pointer">
             See All Promos
           </button>
+        </div>
+      </div>
+
+      {/* FEATURED MENU ITEMS */}
+      <div className="py-12 bg-[#FFEAB8]">
+        <h1 className="text-center text-4xl font-bold">Featured Menu Items</h1>
+        <div className="">
+          <div className="bg-red-600 w-90 h-full p-5 rounded-3xl">
+            <p className="text-white font-bold text-xl w-80 mb-5">
+              <span className="text-white font-bold text-3xl">
+                Chickenjoy Bucket
+              </span>{" "}
+              Philippines' best-tasting crispylicious, jucylicious.
+            </p>
+            <img src={ChickenJoy} alt="" className="mx-auto" />
+          </div>
         </div>
       </div>
     </>
