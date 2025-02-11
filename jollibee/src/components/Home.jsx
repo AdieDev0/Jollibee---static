@@ -4,6 +4,9 @@ import HomeBannerMobile from "../assets/2022/jabee/HomeBannerMobile.png";
 import DownloadApp from "../assets/2021/DownloadApp.png";
 import EightSeven from "../assets/2021/EightSeven.png";
 import OrderPickup from "../assets/2021/OrderPickup.png";
+import JollyTreats from "../assets/2025/JollyTreats.jpg";
+import JanuaryJoys from "../assets/2024/JanuaryJoys.jpg";
+import JoyZone from "../assets/2024/JoyZone.jpg";
 
 const Home = () => {
   return (
@@ -83,16 +86,32 @@ const Home = () => {
       <div className="h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
 
       {/* EXCLUSIVE PROMOS */}
-      <div>
-        <h1> Exclusive Promos</h1>
-        <div>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+      <div className="py-12 px-4 md:px-16 lg:px-48">
+        <h1 className="text-center font-bold text-3xl md:text-4xl mb-10">
+          Exclusive Promos
+        </h1>
+        <div className="flex flex-wrap justify-center md:justify-between items-center">
+          <img
+            src={JollyTreats}
+            alt=""
+            className="w-64 md:w-72 lg:w-[360px] mb-4 md:mb-0"
+          />
+          <img
+            src={JanuaryJoys}
+            alt=""
+            className="w-64 md:w-72 lg:w-[360px] mb-4 md:mb-0"
+          />
+          <img
+            src={JoyZone}
+            alt=""
+            className="w-64 md:w-72 lg:w-[360px] mb-4 md:mb-0"
+          />
         </div>
-        <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-2xl rounded-full px-6 py-3 shadow-lg mt-6 cursor-pointer">
-          See All Promos
-        </button>
+        <div className="flex justify-center mt-6">
+          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-2xl rounded-full px-6 py-3 shadow-lg cursor-pointer">
+            See All Promos
+          </button>
+        </div>
       </div>
     </>
   );
