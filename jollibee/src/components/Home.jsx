@@ -10,7 +10,7 @@ import JoyZone from "../assets/2024/JoyZone.jpg";
 import burger from "../assets/2021/burger.png";
 import Spag from "../assets/2022/food/Spag.png";
 import ChickenJoy from "../assets/2021/ChickenJoy.png";
-
+import BeefSteak from "../assets/2022/food/BeefSteak.png";
 const Home = () => {
   return (
     <>
@@ -119,35 +119,76 @@ const Home = () => {
 
       {/* FEATURED MENU ITEMS */}
       <div className="py-12 bg-[#FFEAB8]">
-        <h1 className="text-center text-4xl font-bold">Featured Menu Items</h1>
-        <div className="justify-between">
-          <div className="bg-red-600 w-90 h-full p-5 rounded-3xl">
-            <p className="text-white font-bold text-xl w-80 mb-5">
-              <span className="text-white font-bold text-3xl">
-                Chickenjoy Bucket
-              </span>{" "}
-              Philippines' best-tasting crispylicious, jucylicious.
+        <h1 className="text-center text-3xl sm:text-4xl font-bold mb-8 sm:mb-10">
+          Featured Menu Items
+        </h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32">
+          {/* Chicken Joy */}
+          <div className="bg-red-600 flex flex-col items-center justify-between p-5 rounded-3xl h-full">
+            <h1 className="text-white font-bold text-2xl sm:text-3xl text-center">
+              Chickenjoy Bucket
+            </h1>
+            <p className="text-white font-bold text-lg sm:text-xl text-center mb-10">
+              Philippines' best-tasting crispylicious, juicylicious.
             </p>
-            <img src={ChickenJoy} alt="" className="mx-auto" />
+            <img
+              src={ChickenJoy}
+              alt="Chickenjoy Bucket"
+              className="w-32 sm:w-40 md:w-48 lg:w-52 mx-auto mt-auto"
+            />
           </div>
-          <div className="bg-red-600 w-90 h-full p-5 rounded-3xl">
-            <p className="text-white font-bold text-xl w-80 mb-5">
-              <span className="text-white font-bold text-3xl">
-                Chickenjoy Bucket
-              </span>{" "}
-              Philippines' best-tasting crispylicious, jucylicious.
+
+          {/* Spaghetti */}
+          <div className="bg-yellow-600 flex flex-col items-center justify-between p-5 rounded-3xl h-full">
+            <h1 className="text-white font-bold text-2xl sm:text-3xl text-center">
+              Spaghetti Pan
+            </h1>
+            <p className="text-white font-bold text-lg sm:text-xl text-center">
+              The meatiest, cheesiest, and sweet-sarap Jolly Spaghetti!
             </p>
-            <img src={ChickenJoy} alt="" className="mx-auto" />
+            <img
+              src={Spag}
+              alt="Spaghetti Pan"
+              className="w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 mx-auto mt-auto"
+            />
           </div>
-          <div className="bg-red-600 w-90 h-full p-5 rounded-3xl">
-            <p className="text-white font-bold text-xl w-80 mb-5">
-              <span className="text-white font-bold text-3xl">
-                Chickenjoy Bucket
-              </span>{" "}
-              Philippines' best-tasting crispylicious, jucylicious.
+
+          {/* Yumburger */}
+          <div className="bg-sky-400 flex flex-col items-center justify-between p-5 rounded-3xl h-full">
+            <h1 className="text-white font-bold text-2xl sm:text-3xl text-center">
+              Yumburger
+            </h1>
+            <p className="text-white font-bold text-lg sm:text-xl text-center">
+              Your favorite 100% Beefy Langhap-Sarap Burgers.
             </p>
-            <img src={ChickenJoy} alt="" className="mx-auto" />
+            <img
+              src={burger}
+              alt="Yumburger"
+              className="w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 mx-auto mt-auto"
+            />
           </div>
+
+          {/* Burger Steak */}
+          <div className="bg-orange-400 flex flex-col items-center justify-between p-5 rounded-3xl h-full">
+            <h1 className="text-white font-bold text-2xl sm:text-3xl text-center">
+              Burger Steak
+            </h1>
+            <p className="text-white font-bold text-lg sm:text-xl text-center">
+              100% pure beef patty with a hearty serving of flavorful mushroom
+              gravy.
+            </p>
+            <img
+              src={BeefSteak}
+              alt="Burger Steak"
+              className="w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 mx-auto mt-auto"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center mt-6">
+          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg sm:text-xl md:text-3xl rounded-full px-4 sm:px-6 py-2 md:py-4 shadow-lg cursor-pointer">
+            View Menu
+          </button>
         </div>
       </div>
     </>
