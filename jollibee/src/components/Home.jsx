@@ -195,7 +195,7 @@ const Home = () => {
       </div>
 
       {/* 2 CARDS */}
-      <div className="flex justify-between px-4 sm:px-8 md:px-16 lg:px-68 py-12">
+      <div className="flex lg:flex-row flex-col  justify-between px-4 sm:px-8 md:px-16 lg:px-68 py-12">
         <div className="flex justify-between">
           <div className="w-sm items-center grid gap-2 relative">
             {/* Offset Background Shape */}
