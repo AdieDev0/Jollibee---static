@@ -13,6 +13,7 @@ import ChickenJoy from "../assets/2021/ChickenJoy.png";
 import BeefSteak from "../assets/2022/food/BeefSteak.png";
 import WhatWeDo from "../assets/2021/WhatWeDo.png";
 import WhatWeStandFor from "../assets/2022/jabee/WhatWeStandFor.png";
+import Footer from "./Footer";
 const Home = () => {
   return (
     <>
@@ -246,6 +247,9 @@ const Home = () => {
 
       {/* DIVIDER */}
       <div className="h-1 border-t-0 bg-orange-400 w-full"></div>
+
+      {/* FOOTER */}
+      <Footer />
     </>
   );
 };
