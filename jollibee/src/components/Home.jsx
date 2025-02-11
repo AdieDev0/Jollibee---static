@@ -11,6 +11,7 @@ import burger from "../assets/2021/burger.png";
 import Spag from "../assets/2022/food/Spag.png";
 import ChickenJoy from "../assets/2021/ChickenJoy.png";
 import BeefSteak from "../assets/2022/food/BeefSteak.png";
+
 const Home = () => {
   return (
     <>
@@ -189,6 +190,17 @@ const Home = () => {
           <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg sm:text-xl md:text-3xl rounded-full px-4 sm:px-6 py-2 md:py-4 shadow-lg cursor-pointer">
             View Menu
           </button>
+        </div>
+      </div>
+
+      {/* 2 CARDS */}
+      <div>
+        <div className="flex justify-between">
+          <div>
+            <img src="" alt="" />
+            <div className="h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
+            <p></p>
+          </div>
         </div>
       </div>
     </>
