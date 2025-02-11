@@ -60,6 +60,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* DIVIDER */}
+      <div className="my-8 h-0.5 border-t-0 bg-black/20 w-6xl mx-auto"></div>
     </>
   );
 };
