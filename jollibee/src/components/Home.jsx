@@ -210,8 +210,8 @@ const Home = () => {
             {/* Text Content */}
             <div className="grid gap-4 mt-8">
               <h1 className="text-center font-bold text-3xl">What We Do</h1>
-              <div className="h-1 border-t-0 w-16 bg-orange-400 mx-auto"></div>
-              <p className="text-center text-lg">
+              <div className="h-1 border-t-0 w-55 bg-orange-400 mx-auto"></div>
+              <p className="text-center text-lg font-oswald text-black/80">
                 Jollibee's Mission is to serve great-tasting food, bringing the
                 joy of eating to everyone.
               </p>
