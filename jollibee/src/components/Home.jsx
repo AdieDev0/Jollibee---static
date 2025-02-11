@@ -86,29 +86,29 @@ const Home = () => {
       <div className="h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
 
       {/* EXCLUSIVE PROMOS */}
-      <div className="py-12 px-4 md:px-16 lg:px-48">
-        <h1 className="text-center font-bold text-3xl md:text-4xl mb-10">
+      <div className="py-12 px-4 sm:px-8 md:px-16 lg:px-48">
+        <h1 className="text-center font-bold text-2xl sm:text-3xl md:text-4xl mb-6 md:mb-10">
           Exclusive Promos
         </h1>
-        <div className="flex flex-wrap justify-center md:justify-between items-center">
+        <div className="flex flex-wrap justify-center gap-4 md:justify-between items-center">
           <img
             src={JollyTreats}
             alt=""
-            className="w-64 md:w-72 lg:w-[360px] mb-4 md:mb-0"
+            className="w-40 sm:w-56 md:w-72 lg:w-[360px] mb-4 md:mb-0"
           />
           <img
             src={JanuaryJoys}
             alt=""
-            className="w-64 md:w-72 lg:w-[360px] mb-4 md:mb-0"
+            className="w-40 sm:w-56 md:w-72 lg:w-[360px] mb-4 md:mb-0"
           />
           <img
             src={JoyZone}
             alt=""
-            className="w-64 md:w-72 lg:w-[360px] mb-4 md:mb-0"
+            className="w-40 sm:w-56 md:w-72 lg:w-[360px] mb-4 md:mb-0"
           />
         </div>
         <div className="flex justify-center mt-6">
-          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-2xl rounded-full px-6 py-3 shadow-lg cursor-pointer">
+          <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg sm:text-xl md:text-2xl rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg cursor-pointer">
             See All Promos
           </button>
         </div>
