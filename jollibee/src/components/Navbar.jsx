@@ -3,6 +3,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { FaAngleDown, FaBars } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -18,9 +19,11 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex justify-end items-center gap-8">
-        <li className="text-lg font-bold text-white cursor-pointer">
-          Delivery
-        </li>
+        <NavLink to="/delivery">
+          <li className="text-lg font-bold text-white cursor-pointer">
+            Delivery
+          </li>
+        </NavLink>
 
         <li className="text-lg font-bold text-white cursor-pointer">
           Location
