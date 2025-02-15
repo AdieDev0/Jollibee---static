@@ -53,7 +53,7 @@ const Delivery = () => {
             <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">
               Download the App
             </h1>
-            <div className="h-0.5 bg-black/20 w-full mb-4"></div>
+            <div className="h-2 bg-orange-400 w-full mb-4"></div>
             <p className="text-base md:text-lg text-center">
               Ordering your Jollibee favorites has never been this easy. Enjoy
               App Exclusive deals only on the Jollibee App.
