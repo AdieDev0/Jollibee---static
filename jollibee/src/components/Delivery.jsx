@@ -2,6 +2,8 @@ import React from "react";
 import New from "../assets/New/DeliverySection.webp";
 import apple from "../assets/2022/downloadMobile/Apple-Store-Badge.png";
 import google from "../assets/2022/downloadMobile/Google-Play-Badge.png";
+import DownloadApp from "../assets/2021/DownloadApp.png";
+import EightSeven from "../assets/2021/EightSeven.png";
 const Delivery = () => {
   return (
     <>
@@ -40,19 +42,19 @@ const Delivery = () => {
         </div>
       </div>
 
-      <div className="bg-orange-100">
-        <div>
-          <div>
-            <img src="" alt="" />
-            <h1>Download the App</h1>
+      <div className="bg-[#FFEAB8] p-10">
+        <div className="bg-white w-100">
+          <div className="grid w-50">
+            <img src={DownloadApp} alt="" />
+            <h1 className="text-3xl font-bold">Download the App</h1>
             <div className="h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
             <p>
               Ordering your Jollibee favorites has never been this easy. Enjoy
               App Exclusive deals only on the Jollibee App.
             </p>
             <div className="flex gap-5">
-              <img src={apple} alt="" />
-              <img src={google} alt="" />
+              <img src={apple} alt="" className="w-40"/>
+              <img src={google} alt="" className="w-40"/>
             </div>
           </div>
         </div>
