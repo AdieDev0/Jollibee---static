@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { FaAngleDown, FaBars } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
