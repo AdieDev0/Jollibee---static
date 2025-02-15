@@ -1,6 +1,7 @@
 import React from "react";
 import New from "../assets/New/DeliverySection.webp";
-
+import apple from "../assets/2022/downloadMobile/Apple-Store-Badge.png";
+import google from "../assets/2022/downloadMobile/Google-Play-Badge.png";
 const Delivery = () => {
   return (
     <>
@@ -35,6 +36,24 @@ const Delivery = () => {
             <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-2xl rounded-3xl px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-6 cursor-pointer">
               Order Now
             </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-orange-100">
+        <div>
+          <div>
+            <img src="" alt="" />
+            <h1>Download the App</h1>
+            <div className="h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
+            <p>
+              Ordering your Jollibee favorites has never been this easy. Enjoy
+              App Exclusive deals only on the Jollibee App.
+            </p>
+            <div className="flex gap-5">
+              <img src={apple} alt="" />
+              <img src={google} alt="" />
+            </div>
           </div>
         </div>
       </div>
