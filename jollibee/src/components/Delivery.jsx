@@ -44,16 +44,16 @@ const Delivery = () => {
 
       <div className="bg-[#FFEAB8] p-6 md:p-10 flex justify-center">
         <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
-          <div className="p-6">
+          <div className="p-10">
             <img
               src={DownloadApp}
               alt="Download App"
-              className="w-full rounded-lg mb-4"
+              className="rounded-lg mb-4 mx-auto"
             />
             <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">
               Download the App
             </h1>
-            <div className="h-2 bg-orange-400 w-full mb-4"></div>
+            <div className="h-2 bg-orange-400 w-full mb-4 rounded-xl"></div>
             <p className="text-base md:text-lg text-center">
               Ordering your Jollibee favorites has never been this easy. Enjoy
               App Exclusive deals only on the Jollibee App.
