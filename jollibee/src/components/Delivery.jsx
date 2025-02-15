@@ -42,19 +42,25 @@ const Delivery = () => {
         </div>
       </div>
 
-      <div className="bg-[#FFEAB8] p-10">
-        <div className="bg-white w-100">
-          <div className="grid w-50">
-            <img src={DownloadApp} alt="" />
-            <h1 className="text-3xl font-bold">Download the App</h1>
-            <div className="h-0.5 border-t-0 bg-black/20 w-full md:w-3/4 lg:w-6xl mx-auto"></div>
-            <p>
+      <div className="bg-[#FFEAB8] p-6 md:p-10 flex justify-center">
+        <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
+          <div className="p-6">
+            <img
+              src={DownloadApp}
+              alt="Download App"
+              className="w-full rounded-lg mb-4"
+            />
+            <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">
+              Download the App
+            </h1>
+            <div className="h-0.5 bg-black/20 w-full mb-4"></div>
+            <p className="text-base md:text-lg text-center">
               Ordering your Jollibee favorites has never been this easy. Enjoy
               App Exclusive deals only on the Jollibee App.
             </p>
-            <div className="flex gap-5">
-              <img src={apple} alt="" className="w-40"/>
-              <img src={google} alt="" className="w-40"/>
+            <div className="flex justify-center gap-4 mt-6">
+              <img src={apple} alt="Apple Store" className="w-20 md:w-40" />
+              <img src={google} alt="Google Play" className="w-20 md:w-40" />
             </div>
           </div>
         </div>
