@@ -14,11 +14,16 @@ const Footer = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-gray-100 text-gray-800 py-6 px-4"
+      className="bg-gray-100 text-gray-800 py-10 px-4"
     >
-      <div className="container mx-auto flex flex-wrap justify-between items-start gap-6">
+      <div className="container mx-auto flex flex-wrap justify-between gap-8">
+        {/* Logo and Order Button */}
         <div className="w-full md:w-1/4 flex flex-col items-center md:items-start">
-          <img src={Logo} alt="Jollibee Logo" className="w-24 md:w-32" />
+          <img
+            src={Logo}
+            alt="Jollibee Logo"
+            className="w-24 md:w-32 hover:scale-105 transition-transform duration-300"
+          />
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -27,30 +32,40 @@ const Footer = () => {
             Order Now
           </motion.button>
         </div>
+
+        {/* About Us */}
         <div className="w-full md:w-1/4 text-center md:text-left">
-          <h3 className="font-bold text-lg text-orange-500">About Us</h3>
-          <p className="text-sm mt-2 text-gray-700 leading-snug">
+          <h3 className="font-bold text-lg text-orange-500 mb-4">About Us</h3>
+          <p className="text-sm text-gray-700 leading-relaxed">
             Jollibee is the largest fast-food chain brand in the Philippines,
-            operating a nationwide network of over 1,000 stores.
+            operating a nationwide network of over 1,000 stores. A dominant
+            market leader in the Philippines, Jollibee enjoys the lion’s share
+            of the local market.
           </p>
         </div>
+
+        {/* Quick Links */}
         <div className="w-full md:w-1/4 text-center md:text-left">
-          <h3 className="font-bold text-lg text-orange-500">Quick Links</h3>
-          <ul className="text-sm mt-2 space-y-2">
+          <h3 className="font-bold text-lg text-orange-500 mb-4">Quick Links</h3>
+          <ul className="text-sm space-y-2">
             {["Home", "Menu", "Locations", "Contact Us"].map((link, index) => (
               <motion.li
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 className="hover:text-orange-500 transition"
               >
-                <a href="#">{link}</a>
+                <a href="#" className="block">
+                  {link}
+                </a>
               </motion.li>
             ))}
           </ul>
         </div>
+
+        {/* Follow Us and App Downloads */}
         <div className="w-full md:w-1/4 text-center md:text-left">
-          <h3 className="font-bold text-lg text-orange-500">Follow Us</h3>
-          <div className="flex justify-center md:justify-start space-x-3 mt-2">
+          <h3 className="font-bold text-lg text-orange-500 mb-4">Follow Us</h3>
+          <div className="flex justify-center md:justify-start space-x-3">
             {[facebook, twitter, instagram, viber].map((icon, index) => (
               <motion.a
                 key={index}
@@ -63,7 +78,11 @@ const Footer = () => {
               </motion.a>
             ))}
           </div>
-          <div className="flex justify-center md:justify-start space-x-3 mt-4">
+
+          <h3 className="font-bold text-lg text-orange-500 mt-6 mb-4">
+            Download the App
+          </h3>
+          <div className="flex justify-center md:justify-start space-x-3">
             {[Apple, Google].map((store, index) => (
               <motion.a
                 key={index}
@@ -81,8 +100,19 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-6 border-t pt-3 text-gray-600 text-xs">
+
+      {/* Copyright Section */}
+      <div className="text-center mt-8 border-t border-gray-300 pt-6 text-gray-600 text-xs">
         <p>&copy; 2025 Jollibee. All rights reserved.</p>
+        <p className="mt-2">
+          <a href="#" className="hover:text-orange-500 transition">
+            Privacy Policy
+          </a>{" "}
+          |{" "}
+          <a href="#" className="hover:text-orange-500 transition">
+            Terms of Service
+          </a>
+        </p>
       </div>
     </motion.footer>
   );
