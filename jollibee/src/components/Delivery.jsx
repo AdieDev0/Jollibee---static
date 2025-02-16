@@ -1,19 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import New from "../assets/New/DeliverySection.webp";
 import group from "../assets/New/group.webp";
 import apple from "../assets/2022/downloadMobile/Apple-Store-Badge.png";
 import google from "../assets/2022/downloadMobile/Google-Play-Badge.png";
 import DownloadApp from "../assets/2021/DownloadApp.png";
 import EightSeven from "../assets/2021/EightSeven.png";
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+
+// Icon component for the Accordion
+function Icon({ id, open }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className={`${
+        id === open ? "rotate-180" : ""
+      } h-5 w-5 transition-transform`}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+      />
+    </svg>
+  );
+}
+
 const Delivery = () => {
+  const [open, setOpen] = useState(0);
+
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
   return (
     <>
+      {/* Header Section */}
       <div className="w-full bg-red-600 p-4 md:p-11">
         <h1 className="text-center text-3xl md:text-5xl font-roboto font-bold text-white">
           Jollibee Delivery
         </h1>
       </div>
 
+      {/* Delivery Section */}
       <div>
         <div className="flex flex-col md:flex-row px-4 md:px-60 pt-10 md:pt-20 mb-10 gap-6 md:gap-20">
           <div className="items-center grid gap-2 relative">
@@ -43,6 +77,7 @@ const Delivery = () => {
         </div>
       </div>
 
+      {/* Cards Section */}
       <div className="bg-[#FFEAB8] p-6 md:p-10 flex flex-col md:flex-row justify-center gap-6 md:gap-10">
         {/* 1st Card */}
         <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
@@ -110,7 +145,40 @@ const Delivery = () => {
         </div>
       </div>
 
-      
+      {/* Accordion Section */}
+      <div className="container mx-auto px-4 md:px-60 py-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6 text-center">
+          Frequently Asked Questions
+        </h2>
+        <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
+          <AccordionHeader onClick={() => handleOpen(1)}>
+            What is Jollibee Delivery?
+          </AccordionHeader>
+          <AccordionBody>
+            Jollibee Delivery is a service that allows you to order your
+            favorite Jollibee meals online or via phone and have them delivered
+            straight to your doorstep.
+          </AccordionBody>
+        </Accordion>
+        <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
+          <AccordionHeader onClick={() => handleOpen(2)}>
+            How can I place an order?
+          </AccordionHeader>
+          <AccordionBody>
+            You can place an order by calling #87000, using the Jollibee app, or
+            visiting JollibeeDelivery.com.
+          </AccordionBody>
+        </Accordion>
+        <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
+          <AccordionHeader onClick={() => handleOpen(3)}>
+            What payment methods are accepted?
+          </AccordionHeader>
+          <AccordionBody>
+            We accept cash on delivery, credit/debit cards, and digital wallets
+            like GCash and PayMaya.
+          </AccordionBody>
+        </Accordion>
+      </div>
     </>
   );
 };
