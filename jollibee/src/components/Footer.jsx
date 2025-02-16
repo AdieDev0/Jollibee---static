@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Apple from "../assets/2022/downloadMobile/Apple-Store-Badge.png";
 import Google from "../assets/2022/downloadMobile/Google-Play-Badge.png";
@@ -7,14 +7,36 @@ import instagram from "../assets/2022/social/instagram.png";
 import twitter from "../assets/2022/social/twitter.png";
 import viber from "../assets/2022/social/viber.png";
 import Logo from "../assets/2022/food/JollibeeLogo.png";
+import { FaArrowUp } from "react-icons/fa"; // For the back-to-top button
 
 const Footer = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  // Show/hide back-to-top button based on scroll position
+  const checkScrollTop = () => {
+    if (!showBackToTop && window.pageYOffset > 400) {
+      setShowBackToTop(true);
+    } else if (showBackToTop && window.pageYOffset <= 400) {
+      setShowBackToTop(false);
+    }
+  };
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Add scroll event listener
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", checkScrollTop);
+  }
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-gray-100 text-gray-800 py-10 px-4"
+      className="bg-gradient-to-r from-orange-50 to-orange-100 text-gray-800 py-12 px-4 md:px-36"
     >
       <div className="container mx-auto flex flex-wrap justify-between gap-8">
         {/* Logo and Order Button */}
@@ -22,7 +44,7 @@ const Footer = () => {
           <img
             src={Logo}
             alt="Jollibee Logo"
-            className="w-24 md:w-32 hover:scale-105 transition-transform duration-300"
+            className="w-24 md:w-60 hover:scale-105 transition-transform duration-300"
           />
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -103,17 +125,27 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="text-center mt-8 border-t border-gray-300 pt-6 text-gray-600 text-xs">
-        <p>&copy; 2025 Jollibee. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Dev.Adie.
+        </p>
         <p className="mt-2">
-          <a href="#" className="hover:text-orange-500 transition">
-            Privacy Policy
-          </a>{" "}
-          |{" "}
-          <a href="#" className="hover:text-orange-500 transition">
-            Terms of Service
-          </a>
+          <span className="text-orange-500">Practice Project</span> |{" "}
+          <span className="text-orange-500">Static Website</span>
         </p>
       </div>
+
+      {/* Back-to-Top Button */}
+      {showBackToTop && (
+        <motion.button
+          onClick={scrollToTop}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition duration-300"
+        >
+          <FaArrowUp className="w-5 h-5" />
+        </motion.button>
+      )}
     </motion.footer>
   );
 };
