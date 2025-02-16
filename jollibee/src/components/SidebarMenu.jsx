@@ -5,12 +5,16 @@ import Breakfast from "../assets/Menu/Breakfast.webp";
 import Burger from "../assets/Menu/Burger.png";
 import BurgerSteak from "../assets/Menu/BurgerSteak.webp";
 import ChickenJoy from "../assets/Menu/ChickenJoy.webp";
-import ChickenSandwhich from "../assets/Menu/ChickenJoy.webp";
-
-
-
-
-
+import ChickenSandwich from "../assets/Menu/ChickenSandwich.webp";
+import Dessert from "../assets/Menu/Dessert.png";
+import FamilyMeals from "../assets/Menu/FamilyMeals.webp";
+import Fries from "../assets/Menu/Fries.webp";
+import JollyHotdog from "../assets/Menu/JollyHotdog.webp";
+import JollyKid from "../assets/Menu/JollyKid.webp";
+import JollySpag from "../assets/Menu/JollySpag.webp";
+import NewProducts from "../assets/Menu/NewProducts.webp";
+import Palabok from "../assets/Menu/Palabok.png";
+import SuperMeals from "../assets/Menu/SuperMeals.webp";
 
 const SidebarMenu = () => {
   const menuItems = [
