@@ -1,8 +1,5 @@
 import React from "react";
 import SidebarMenu from "./SidebarMenu";
-import { FaInfoCircle } from "react-icons/fa"; // Info icon
-
-// Image Imports
 import TwoChick from "../assets/Menu/BestSellers/2pcsChick.webp";
 import EightAndSix from "../assets/Menu/BestSellers/8and6pc.webp";
 import BreakfastChickenJoy from "../assets/Menu/BestSellers/BreakfastChickenJoy.webp";
@@ -20,71 +17,60 @@ import YumburgerHalf from "../assets/Menu/BestSellers/YumburgerHalf.webp";
 import YumburgerSolo from "../assets/Menu/BestSellers/YumburgerSolo.png";
 import YumDrink from "../assets/Menu/BestSellers/YumDrink.webp";
 
-// Menu Data with Description
 const menuItems = [
-  { name: "2-pc. Chickenjoy", image: TwoChick, description: "Crispylicious, juicylicious Chickenjoy with rice!" },
-  { name: "8-pc. Chickenjoy Bucket", image: EightAndSix, description: "Enjoy 8-pc Chickenjoy perfect for sharing!" },
-  { name: "Breakfast Chickenjoy", image: BreakfastChickenJoy, description: "Start your morning with Chickenjoy & rice." },
-  { name: "Bucket Treats", image: Bucket, description: "A bucket of your favorite crispylicious Chickenjoy." },
-  { name: "Bucket Treats w/ Rice", image: BucketWRice, description: "A Chickenjoy bucket paired with rice." },
-  { name: "Burger Bundle", image: BurgerBundle, description: "A delicious burger bundle for the whole family." },
-  { name: "Cheesy Yumburger Solo", image: CheesyYumburgerSolo, description: "A juicy burger topped with cheese." },
-  { name: "Chick'n Sandwich Solo", image: ChickSolo, description: "A crispy chicken sandwich with mayo." },
-  { name: "Drinkmin", image: Drinkmin, description: "Refreshing drink to complete your meal." },
-  { name: "Family Pan Duo", image: FamilyPanDuo, description: "Two family pans of your favorite dishes." },
-  { name: "Jolly Spaghetti Family Pan", image: Palabok, description: "Sweet-sarap Jolly Spaghetti for sharing!" },
-  { name: "Super Meal", image: SuperMeal, description: "A complete meal with Chickenjoy, rice, and more!" },
-  { name: "Yumburger Family Savers", image: YumburgerFamilySavers, description: "Family pack of your favorite Yumburger." },
-  { name: "Yumburger Half", image: YumburgerHalf, description: "Half portion of Yumburger goodness." },
-  { name: "Yumburger Solo", image: YumburgerSolo, description: "Classic Yumburger in a solo serving." },
-  { name: "Yum Drink", image: YumDrink, description: "Cool and refreshing drink to go with your meal." },
+  { name: "2-pc. Chickenjoy", image: TwoChick, desc: "Crispylicious, juicylicious Chickenjoy with rice!" },
+  { name: "8-pc. Chickenjoy Bucket", image: EightAndSix, desc: "Enjoy 8-pc Chickenjoy perfect for sharing!" },
+  { name: "Breakfast Chickenjoy", image: BreakfastChickenJoy, desc: "Chickenjoy with garlic rice & egg!" },
+  { name: "Bucket Treats", image: Bucket, desc: "Perfect meal with crispy Chickenjoy & sides." },
+  { name: "Bucket Treats w/ Rice", image: BucketWRice, desc: "Bucket meal that includes rice servings!" },
+  { name: "Burger Bundle", image: BurgerBundle, desc: "Tasty burgers for the whole family!" },
+  { name: "Cheesy Yumburger Solo", image: CheesyYumburgerSolo, desc: "Classic Yumburger with extra cheese!" },
+  { name: "Chick'n Sandwich Solo", image: ChickSolo, desc: "Crispy chicken sandwich with mayo dressing!" },
+  { name: "Drinkmin", image: Drinkmin, desc: "Refreshing beverage to complete your meal!" },
+  { name: "Family Pan Duo", image: FamilyPanDuo, desc: "Double the fun with our Family Pan Duo!" },
+  { name: "Jolly Spaghetti Family Pan", image: Palabok, desc: "Sweet, meaty spaghetti for the family!" },
+  { name: "Super Meal", image: SuperMeal, desc: "Complete meal with Chickenjoy, rice & sides!" },
+  { name: "Yumburger Family Savers", image: YumburgerFamilySavers, desc: "Great value burger bundle!" },
+  { name: "Yumburger Half", image: YumburgerHalf, desc: "Half-sized Yumburger for a quick snack!" },
+  { name: "Yumburger Solo", image: YumburgerSolo, desc: "Classic Yumburger in its simplest form!" },
+  { name: "Yum Drink", image: YumDrink, desc: "Pair your meal with a delicious drink!" },
 ];
-
-// Reusable Menu Card Component
-const MenuCard = React.memo(({ name, image, description }) => (
-  <div className="relative border-2 border-orange-500 rounded-2xl shadow-md bg-white p-5 flex flex-col items-center text-center transition-transform transform hover:scale-105">
-    
-    {/* Info Icon */}
-    <FaInfoCircle className="absolute top-3 right-3 text-orange-500 text-xl cursor-pointer" />
-
-    {/* Image */}
-    <img src={image} alt={name} className="w-32 h-32 object-cover mb-4" />
-
-    {/* Title */}
-    <h3 className="text-lg font-bold text-gray-900">{name}</h3>
-
-    {/* Description */}
-    <p className="text-gray-600 text-sm my-2">{description}</p>
-
-    {/* Order Button */}
-    <button className="mt-3 bg-orange-500 text-white font-semibold px-4 py-2 rounded-full transition hover:bg-orange-600">
-      Order Now
-    </button>
-  </div>
-));
 
 const ViewMenu = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-1/5 min-w-[250px]">
+      <div className="w-1/5 min-w-[250px] bg-white shadow-lg hidden lg:block">
         <SidebarMenu />
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-10">
-        <h2 className="text-center font-bold text-3xl mb-10 text-gray-900">Best Sellers</h2>
+      <div className="flex-1 p-5 md:p-10">
+        <p className="text-center font-bold text-3xl md:text-4xl mb-10">Best Sellers</p>
 
-        {/* Grid Layout */}
+        {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {menuItems.map((item, index) => (
-            <MenuCard key={index} name={item.name} image={item.image} description={item.description} />
+            <div key={index} className="bg-white border rounded-xl shadow-lg p-5 text-center relative hover:shadow-xl transition-shadow">
+              {/* Image */}
+              <img src={item.image} alt={item.name} className="w-full h-40 object-contain mx-auto" />
+
+              {/* Item Details */}
+              <div className="mt-4">
+                <h3 className="text-lg font-bold">{item.name}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+
+              {/* Order Now Button */}
+              <button className="mt-4 bg-orange-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-orange-600 transition">
+                Order Now
+              </button>
+            </div>
           ))}
         </div>
       </div>
     </div>
   );
 };
-
 
 export default ViewMenu;
