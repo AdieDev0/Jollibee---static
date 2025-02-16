@@ -32,9 +32,11 @@ const Navbar = () => {
         {/* Dropdown Menus */}
         <DropdownMenu title="Menu">
           <MenuItem>
-            <a href="#" className="block px-4 py-2 text-gray-700">
-              View Menu
-            </a>
+            <NavLink to="/ViewMenu">
+              <a href="#" className="block px-4 py-2 text-gray-700">
+                View Menu
+              </a>
+            </NavLink>
           </MenuItem>
           <MenuItem>
             <button className="block w-full text-left px-4 py-2 text-gray-700">
