@@ -147,38 +147,70 @@ const Delivery = () => {
 
       {/* Accordion Section */}
       <div className="container mx-auto px-4 md:px-60 py-10">
-        <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6 text-center">
-          Frequently Asked Questions
+        <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-8 text-center">
+          Frequently Asked Questions (FAQs)
         </h2>
-        <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-          <AccordionHeader onClick={() => handleOpen(1)}>
-            What is Jollibee Delivery?
-          </AccordionHeader>
-          <AccordionBody>
-            Jollibee Delivery is a service that allows you to order your
-            favorite Jollibee meals online or via phone and have them delivered
-            straight to your doorstep.
-          </AccordionBody>
-        </Accordion>
-        <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-          <AccordionHeader onClick={() => handleOpen(2)}>
-            How can I place an order?
-          </AccordionHeader>
-          <AccordionBody>
-            You can place an order by calling #87000, using the Jollibee app, or
-            visiting JollibeeDelivery.com.
-          </AccordionBody>
-        </Accordion>
-        <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-          <AccordionHeader onClick={() => handleOpen(3)}>
-            What payment methods are accepted?
-          </AccordionHeader>
-          <AccordionBody>
-            We accept cash on delivery, credit/debit cards, and digital wallets
-            like GCash and PayMaya.
-          </AccordionBody>
-        </Accordion>
+        <div className="space-y-4">
+          {/* Accordion 1 */}
+          <Accordion
+            open={open === 1}
+            icon={<Icon id={1} open={open} />}
+            className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
+          >
+            <AccordionHeader
+              onClick={() => handleOpen(1)}
+              className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+            >
+              What is Jollibee Delivery?
+            </AccordionHeader>
+            <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
+              Jollibee Delivery is a service that allows you to order your
+              favorite Jollibee meals online or via phone and have them
+              delivered straight to your doorstep.
+            </AccordionBody>
+          </Accordion>
+
+          {/* Accordion 2 */}
+          <Accordion
+            open={open === 2}
+            icon={<Icon id={2} open={open} />}
+            className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
+          >
+            <AccordionHeader
+              onClick={() => handleOpen(2)}
+              className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+            >
+              How can I place an order?
+            </AccordionHeader>
+            <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
+              You can place an order by calling #87000, using the Jollibee app,
+              or visiting JollibeeDelivery.com.
+            </AccordionBody>
+          </Accordion>
+
+          {/* Accordion 3 */}
+          <Accordion
+            open={open === 3}
+            icon={<Icon id={3} open={open} />}
+            className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
+          >
+            <AccordionHeader
+              onClick={() => handleOpen(3)}
+              className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+            >
+              What payment methods are accepted?
+            </AccordionHeader>
+            <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
+              We accept cash on delivery, credit/debit cards, and digital
+              wallets like GCash and PayMaya.
+            </AccordionBody>
+          </Accordion>
+        </div>
+
+        <h1 className="underline font-bold text-red-600 hover:text-red-700 duration-200 text-xl text-center mt-20 cursor-pointer">More Question & Answer</h1>
       </div>
+
+      
     </>
   );
 };
