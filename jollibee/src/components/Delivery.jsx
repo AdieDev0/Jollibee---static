@@ -1,5 +1,6 @@
 import React from "react";
 import New from "../assets/New/DeliverySection.webp";
+import group from "../assets/New/group.webp";
 import apple from "../assets/2022/downloadMobile/Apple-Store-Badge.png";
 import google from "../assets/2022/downloadMobile/Google-Play-Badge.png";
 import DownloadApp from "../assets/2021/DownloadApp.png";
@@ -42,7 +43,7 @@ const Delivery = () => {
         </div>
       </div>
 
-      <div className="bg-[#FFEAB8] p-6 md:p-10 flex justify-center">
+      <div className="bg-[#FFEAB8] p-6 md:p-10 flex flex-col md:flex-row justify-center gap-6 md:gap-10">
         {/* 1st Card */}
         <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
           <div className="p-10">
@@ -90,7 +91,7 @@ const Delivery = () => {
         <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
           <div className="p-10">
             <img
-              src={EightSeven}
+              src={group}
               alt="Download App"
               className="rounded-lg mb-4 mx-auto"
             />
@@ -102,7 +103,7 @@ const Delivery = () => {
               Order your Jollibee favorites and send to multiple recipients and
               addresses.
             </p>
-            <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-xl rounded-full px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-6 cursor-pointer mx-auto block">
+            <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-xl rounded-full px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-14 cursor-pointer mx-auto block">
               Order for Multi-Delivery
             </button>
           </div>
