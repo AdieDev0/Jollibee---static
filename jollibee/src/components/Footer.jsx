@@ -36,7 +36,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-gradient-to-r from-orange-50 to-orange-100 text-gray-800 py-12 px-4 md:px-36"
+      className="bg-gradient-to-r from-orange-50 to-orange-100 text-gray-800 py-12 px-4 md:px-36 border-t-3 border-orange-400"
     >
       <div className="container mx-auto flex flex-wrap justify-between gap-8">
         {/* Logo and Order Button */}
@@ -68,7 +68,9 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div className="w-full md:w-1/4 text-center md:text-left">
-          <h3 className="font-bold text-lg text-orange-500 mb-4">Quick Links</h3>
+          <h3 className="font-bold text-lg text-orange-500 mb-4">
+            Quick Links
+          </h3>
           <ul className="text-sm space-y-2">
             {["Home", "Menu", "Locations", "Contact Us"].map((link, index) => (
               <motion.li
@@ -125,9 +127,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="text-center mt-8 border-t border-gray-300 pt-6 text-gray-600 text-xs">
-        <p>
-          &copy; {new Date().getFullYear()} Dev.Adie.
-        </p>
+        <p>&copy; {new Date().getFullYear()} Dev.Adie.</p>
         <p className="mt-2">
           <span className="text-orange-500">Practice Project</span> |{" "}
           <span className="text-orange-500">Static Website</span>
