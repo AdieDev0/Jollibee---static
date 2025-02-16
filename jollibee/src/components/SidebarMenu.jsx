@@ -54,7 +54,7 @@ const MenuItem = ({ item, isSelected, onClick }) => (
         alt={item.name}
         className="w-16 h-16 object-cover rounded-lg shadow-sm"
       />
-      <span className="ml-3">{item.name}</span>
+      <span className="ml-5 font-bold">{item.name}</span>
     </a>
   </li>
 );
