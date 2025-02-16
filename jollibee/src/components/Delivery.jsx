@@ -43,6 +43,7 @@ const Delivery = () => {
       </div>
 
       <div className="bg-[#FFEAB8] p-6 md:p-10 flex justify-center">
+        {/* 1st Card */}
         <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
           <div className="p-10">
             <img
@@ -64,6 +65,28 @@ const Delivery = () => {
             </div>
           </div>
         </div>
+        {/* 2nd Card */}
+        <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
+          <div className="p-10">
+            <img
+              src={EightSeven}
+              alt="Download App"
+              className="rounded-lg mb-4 mx-auto"
+            />
+            <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">
+              Call #87000
+            </h1>
+            <div className="h-2 bg-orange-400 w-full mb-4 rounded-xl"></div>
+            <p className="text-base md:text-lg text-center">
+              Jollibee delivery is just a call away! Call #87000 to order your
+              Jollibee favorites! Don’t forget the hashtag!
+            </p>
+            <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-2xl rounded-3xl px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-6 cursor-pointer mx-auto block">
+              Order Now
+            </button>
+          </div>
+        </div>
+        {/* 3rd Card */}
       </div>
     </>
   );
