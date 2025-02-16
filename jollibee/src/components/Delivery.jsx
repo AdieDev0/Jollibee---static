@@ -10,7 +10,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-
+import Footer from "./Footer";
 // Icon component for the Accordion
 function Icon({ id, open }) {
   return (
@@ -207,10 +207,12 @@ const Delivery = () => {
           </Accordion>
         </div>
 
-        <h1 className="underline font-bold text-red-600 hover:text-red-700 duration-200 text-xl text-center mt-20 cursor-pointer">More Question & Answer</h1>
+        <h1 className="underline font-bold text-red-600 hover:text-red-700 duration-200 text-xl text-center mt-20 cursor-pointer">
+          More Question & Answer
+        </h1>
       </div>
 
-      
+      <Footer />
     </>
   );
 };
