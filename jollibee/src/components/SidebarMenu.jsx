@@ -1,4 +1,16 @@
 import React from "react";
+import BestSelling from "../assets/Menu/BestSelling.webp";
+import Beverage from "../assets/Menu/Beverage.webp";
+import Breakfast from "../assets/Menu/Breakfast.webp";
+import Burger from "../assets/Menu/Burger.png";
+import BurgerSteak from "../assets/Menu/BurgerSteak.webp";
+import ChickenJoy from "../assets/Menu/ChickenJoy.webp";
+import ChickenSandwhich from "../assets/Menu/ChickenJoy.webp";
+
+
+
+
+
 
 const SidebarMenu = () => {
   const menuItems = [
