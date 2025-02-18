@@ -64,7 +64,26 @@ const SidebarMenu = () => {
               <span className="ml-5 font-bold">New Products</span>
             </NavLink>
           </li>
-          {/* Add other menu items here following the same pattern */}
+          {/* FamilyMeals */}
+          <li>
+            <NavLink
+              to="/FamilyMeals"
+              className={({ isActive }) =>
+                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
+                  isActive
+                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
+                    : "text-black/80 hover:bg-white hover:scale-105"
+                }`
+              }
+            >
+              <img
+                src={FamilyMeals}
+                alt="New Products"
+                className="w-16 h-16 object-cover rounded-lg shadow-sm"
+              />
+              <span className="ml-5 font-bold">Family Meals</span>
+            </NavLink>
+          </li>
         </ul>
       </div>
     </aside>
