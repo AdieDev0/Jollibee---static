@@ -44,6 +44,7 @@ const SidebarMenu = () => {
               <span className="ml-5 font-bold">Best Selling</span>
             </NavLink>
           </li>
+          {/* NewProduct */}
           <li>
             <NavLink
               to="/NewProduct"
