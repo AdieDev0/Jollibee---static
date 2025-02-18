@@ -23,14 +23,15 @@ const SidebarMenu = () => {
     <aside className="w-full md:w-80 bg-orange-50 shadow-lg h-screen fixed left-0 top-0 overflow-y-auto">
       <div className="p-6">
         <h2 className="text-2xl font-bold text-red-600 mb-6">Menu</h2>
-        <ul className="space-y-3">
+        <ul className="space-y-5 py-5">
+          {/* BestSelling */}
           <li>
             <NavLink
               to="/ViewMenu"
               className={({ isActive }) =>
                 `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
                   isActive
-                    ? "bg-white text-black scale-105 shadow-md"
+                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
                     : "text-black/80 hover:bg-white hover:scale-105"
                 }`
               }
@@ -49,7 +50,7 @@ const SidebarMenu = () => {
               className={({ isActive }) =>
                 `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
                   isActive
-                    ? "bg-white text-black scale-105 shadow-md"
+                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
                     : "text-black/80 hover:bg-white hover:scale-105"
                 }`
               }
