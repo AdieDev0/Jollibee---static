@@ -48,7 +48,7 @@ const NewProduct = () => {
 
     {/* Main Content */}
     <div className="flex-1 p-5 md:p-10">
-      <p className="text-center font-bold text-3xl md:text-4xl mb-10">Best Sellers</p>
+      <p className="text-center font-bold text-3xl md:text-4xl mb-10">New Products</p>
 
       {/* Responsive Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
