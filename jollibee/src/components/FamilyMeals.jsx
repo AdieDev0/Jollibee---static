@@ -1,4 +1,30 @@
 import React from "react";
+import SidebarMenu from "./SidebarMenu";
+import BucketChicken from "../assets/Menu/FamilyMeals/BucketChicken.webp";
+import BurgerBundle from "../assets/Menu/FamilyMeals/BurgerBundle.png";
+import FamilyBurgerSteak from "../assets/Menu/FamilyMeals/FamilyBurgerSteak.png";
+import FamilyCheeseBurger from "../assets/Menu/FamilyMeals/FamilyCheeseBurger.webp";
+import FamilyDuo from "../assets/Menu/FamilyMeals/FamilyDuo.webp";
+import FourPieces from "../assets/Menu/FamilyMeals/FourPieces.webp";
+import JoyAtHome from "../assets/Menu/FamilyMeals/JoyAtHome.webp";
+import PlatterPalabok from "../assets/Menu/FamilyMeals/PlatterPalabok.webp";
+import PlatterSpag from "../assets/Menu/FamilyMeals/PlatterSpag.webp";
+import SixChickenJoySolo from "../assets/Menu/FamilyMeals/SixChickenJoySolo.webp";
+import SweetPies from "../assets/Menu/FamilyMeals/SweetPies.webp";
+import YumBurgerFamilySavers from "../assets/Menu/FamilyMeals/YumBurgerFamilySavers.webp";
+
+const menuItems = [
+  {
+    name: "4 - pc. Chickenjoy Family Box Solo",
+    image: FourPieces,
+    desc: "Four-piece Family Box of the Philippines’ best-tasting crispylicious, juicylicious Chickenjoy.",
+  },
+  {
+    name: "Burger Steak Family Pan",
+    image: FamilyBurgerSteak,
+    desc: "A platter of 100% pure beef patty with a hearty serving of flavorful mushroom gravy, good for 6.",
+  },
+];
 
 const FamilyMeals = () => {
   return (
