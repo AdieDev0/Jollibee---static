@@ -18,6 +18,7 @@ import Palabok from "../assets/Menu/Palabok.png";
 import SuperMeals from "../assets/Menu/SuperMeals.webp";
 
 const menuItems = [
+  { name: "Best Selling", image: BestSelling },
   { name: "New Products", image: NewProducts },
   { name: "Family Meals", image: FamilyMeals },
   { name: "Breakfast", image: Breakfast },
