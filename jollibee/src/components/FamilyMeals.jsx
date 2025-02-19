@@ -80,8 +80,8 @@ const FamilyMeals = () => {
 
       {/* Main Content */}
       <div className="flex-1 p-6 md:p-12">
-        <p className="text-center font-extrabold text-4xl md:text-5xl text-yellow-700 mb-12">
-          New Products
+        <p className="text-center font-extrabold text-4xl md:text-5xl text-black/80 mb-12">
+          Family Meals
         </p>
 
         {/* Responsive Grid */}
