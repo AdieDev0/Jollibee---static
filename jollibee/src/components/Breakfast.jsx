@@ -21,6 +21,41 @@ const menuItems = [
     image: HotdogSolo,
     desc: "Meaty hotdog served with garlic rice and fried egg.",
   },
+  {
+    name: "Bacon, Egg, & Cheese Pancake Sandwich",
+    image: BaconEggCheesePancake,
+    desc: "Crispy bacon, cheese, and fried egg, sandwiched between two lightly glazed pancake buns.",
+  },
+  {
+    name: "Corned Beef",
+    image: CornedBeefSolo,
+    desc: "Juicy corned beef served with garlic rice and fried egg.",
+  },
+  {
+    name: "Beef Tapa",
+    image: BeefTapaSolo,
+    desc: "Tender beef tapa served with garlic rice and fried egg.",
+  },
+  {
+    name: "Breakfast Burger Steak",
+    image: BreakfastBurgerSteakSolo,
+    desc: "1 piece of beef patty with flavorful mushroom gravy, topped with mushroom slices. Served with garlic rice and fried egg.",
+  },
+  {
+    name: "Longganisa",
+    image: LongganisaSolo,
+    desc: "2 pieces of mildly seasoned longganisa served with garlic rice and fried egg.",
+  },
+  {
+    name: "Breakfast Chickenjoy",
+    image: BreakfastChickenjoySolo,
+    desc: "Philippines’ best-tasting crispylicious, juicylicious Chickenjoy that is crispy on the outside, tender and juicy on the inside with garlic rice and fried egg.",
+  },
+  {
+    name: "Bacon, Egg, & Cheese Sandwich",
+    image: BaconSandwichsolo,
+    desc: "Crispy bacon, cheese, and fried egg sandwiched between two soft buns.",
+  },
 ];
 
 const Breakfast = () => {
