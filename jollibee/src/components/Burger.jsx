@@ -1,12 +1,17 @@
 import React from "react";
 import SidebarMenu from "./SidebarMenu";
-
+import YumburgerSolo from "../assets/Menu/Burger/YumburgerSolo.png";
+import AmazingAlohaChamp from "../assets/Menu/Burger/AmazingAlohaChamp.png";
+import BaconCheesyYumburgerSolo from "../assets/Menu/Burger/BaconCheesyYumburgerSolo.webp";
+import ChampJrSolo from "../assets/Menu/Burger/ChampJrSolo.png";
+import ChampOne from "../assets/Menu/Burger/ChampOne.webp";
+import CheesyYumburgerSolo from "../assets/Menu/Burger/CheesyYumburgerSolo.png";
 const menuItems = [
   {
     name: "Yumburger",
-    image: ,
+    image: YumburgerSolo,
     desc: "Your favorite beefiest langhap-sarap Yumburger, with beefy patty and our special dressing in between soft buns.",
-  }
+  },
 ];
 
 const Burger = () => {
