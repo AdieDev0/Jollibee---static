@@ -1,11 +1,25 @@
 import React from "react";
 import SidebarMenu from "./SidebarMenu";
+import BaconEggCheesePancake from "../assets/Menu/Breakfast/BaconEggCheesePancake.webp";
+import BaconSandwichsolo from "../assets/Menu/Breakfast/BaconSandwichsolo.webp";
+import BeefTapaSolo from "../assets/Menu/Breakfast/BeefTapaSolo.webp";
+import BreakfastBurgerSteakSolo from "../assets/Menu/Breakfast/BreakfastBurgerSteakSolo.webp";
+import BreakfastChickenjoySolo from "../assets/Menu/Breakfast/BreakfastChickenjoySolo.webp";
+import CornedBeefSolo from "../assets/Menu/Breakfast/CornedBeefSolo.webp";
+import HotdogSolo from "../assets/Menu/Breakfast/HotdogSolo.webp";
+import LongganisaSolo from "../assets/Menu/Breakfast/LongganisaSolo.webp";
+import PancakeSolo from "../assets/Menu/Breakfast/PancakeSolo.webp";
 
 const menuItems = [
   {
-    name: "Yumburger Family Savers",
-    image: ,
-    desc: "Jollibee Yumburger Family Savers has all your favorite snacks in one! This includes your favorite beefy langhap-sarap Yumburger and Jolly Crispy Fries. Good for three.",
+    name: "2 - pc. Pancakes",
+    image: PancakeSolo,
+    desc: "2 pieces of moist pancakes served with butter and maple syrup.",
+  },
+  {
+    name: "Breakfast Hotdog",
+    image: HotdogSolo,
+    desc: "Meaty hotdog served with garlic rice and fried egg.",
   },
 ];
 
