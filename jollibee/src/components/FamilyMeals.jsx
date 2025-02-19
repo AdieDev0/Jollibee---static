@@ -11,7 +11,7 @@ import PlatterPalabok from "../assets/Menu/FamilyMeals/PlatterPalabok.webp";
 import PlatterSpag from "../assets/Menu/FamilyMeals/PlatterSpag.webp";
 import SixChickenJoySolo from "../assets/Menu/FamilyMeals/SixChickenJoySolo.webp";
 import SweetPies from "../assets/Menu/FamilyMeals/SweetPies.webp";
-import YumBurgerFamilySavers from "../assets/Menu/FamilyMeals/YumBurgerFamilySavers.webp";
+import YumBurgerFamilySavers from "../assets/Menu/FamilyMeals/YumburgerFamilySavers.webp";
 
 const menuItems = [
   {
