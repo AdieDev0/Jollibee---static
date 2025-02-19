@@ -244,6 +244,46 @@ const SidebarMenu = () => {
               <span className="ml-5 font-bold">Jolly Hotdog & Pies</span>
             </NavLink>
           </li>
+          {/* Palabok */}
+          <li>
+            <NavLink
+              to="/Palabok"
+              className={({ isActive }) =>
+                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
+                  isActive
+                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
+                    : "text-black/80 hover:bg-white hover:scale-105"
+                }`
+              }
+            >
+              <img
+                src={Palabok}
+                alt="New Products"
+                className="w-16 h-16 object-cover rounded-lg shadow-sm"
+              />
+              <span className="ml-5 font-bold">Palabok</span>
+            </NavLink>
+          </li>
+          {/* Fries & Sides */}
+          <li>
+            <NavLink
+              to="/Fries"
+              className={({ isActive }) =>
+                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
+                  isActive
+                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
+                    : "text-black/80 hover:bg-white hover:scale-105"
+                }`
+              }
+            >
+              <img
+                src={Fries}
+                alt="New Products"
+                className="w-16 h-16 object-cover rounded-lg shadow-sm"
+              />
+              <span className="ml-5 font-bold">Fries & Sides</span>
+            </NavLink>
+          </li>
         </ul>
       </div>
     </aside>
