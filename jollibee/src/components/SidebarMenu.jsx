@@ -21,7 +21,7 @@ import SuperMeals from "../assets/Menu/SuperMeals.webp";
 const SidebarMenu = () => {
   return (
     <aside className="w-full md:w-80 bg-orange-50 shadow-lg h-screen fixed left-0 top-0 overflow-y-auto">
-      <div className="p-6">
+      <div className="p-4">
         <h2 className="text-2xl font-bold text-red-600 mb-6">Menu</h2>
         <ul className="space-y-5 py-5">
           {/* BestSelling */}
