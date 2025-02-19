@@ -66,7 +66,7 @@ const menuItems = [
   },
   {
     name: "Joy At Home Birthday Set",
-    image: PlatterPalabok,
+    image: JoyAtHome,
   },
 ];
 
