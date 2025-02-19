@@ -1,13 +1,60 @@
 import React from "react";
 import SidebarMenu from "./SidebarMenu";
-
+import BucketChicken from "../assets/Menu/Chickenjoy/BucketChicken.webp";
+import ChickenjoyBurgerSteak from "../assets/Menu/Chickenjoy/ChickenjoyBurgerSteak.webp";
+import ChickenjoyPalabok from "../assets/Menu/Chickenjoy/ChickenjoyPalabok.webp";
+import ChickenjoySolo from "../assets/Menu/Chickenjoy/ChickenjoySolo.png";
+import ChickenjoySpaghetti from "../assets/Menu/Chickenjoy/ChickenjoySpaghetti.webp";
+import ChickenjoyWFries from "../assets/Menu/Chickenjoy/ChickenjoyWFries.webp";
+import FourChicken from "../assets/Menu/Chickenjoy/FourChicken.webp";
+import TwoChickenjoy from "../assets/Menu/Chickenjoy/TwoChickenjoy.webp";
 const menuItems = [
   {
-    name: "6-pc. Chickenjoy Bucket",
-    image: ,
-    desc: "6 pieces of crispylicious, juicylicious Chickenjoy that is crispy on the outside, tender and juicy on the inside.",
+    name: "8 - pc. Chickenjoy Bucket",
+    image: BucketChicken,
+    desc: "A bucket of your favorite crispylicious, juicylicious Chickenjoy!",
   },
-]
+  {
+    name: "6 - pc. Chickenjoy Bucket",
+    image: BucketChicken,
+    desc: "A bucket of your favorite crispylicious, juicylicious Chickenjoy!",
+  },
+  {
+    name: "4 - pc. Chickenjoy Family Box",
+    image: FourChicken,
+    desc: "A box of your favorite crispylicious, juicylicious Chickenjoy that’s perfect for the family!",
+  },
+  {
+    name: "2 - pc. Chickenjoy Solo",
+    image: TwoChickenjoy,
+    desc: "Philippines’ best-tasting crispylicious, juicylicious Chickenjoy that is crispy on the outside, tender and juicy on the inside.",
+  },
+  {
+    name: "1 - pc. Chickenjoy Solo",
+    image: ChickenjoySolo,
+    desc: "Philippines’ best-tasting crispylicious, juicylicious Chickenjoy that is crispy on the outside, tender and juicy on the inside.",
+  },
+  {
+    name: "1 - pc. Chickenjoy w/ Jolly Spaghetti",
+    image: ChickenjoySpaghetti,
+    desc: "Philippines’ best-tasting crispylicious, juicylicious Chickenjoy paired with the meatiest, cheesiest, sweet-sarap Jolly Spaghetti.",
+  },
+  {
+    name: "1 - pc. Chickenjoy w/ Burger Steak",
+    image: ChickenjoyBurgerSteak,
+    desc: "Philippines’ best-tasting crispylicious, juicylicious Chickenjoy that is crispy on the outside, tender and juicy on the inside.",
+  },
+  {
+    name: "1 - pc. Chickenjoy w/ Palabok",
+    image: ChickenjoyPalabok,
+    desc: "Philippines’ best-tasting crispylicious, juicylicious Chickenjoy paired with your classic favorite saucy-sarap Palabok.",
+  },
+  {
+    name: "1 - pc. Chickenjoy w/ Fries",
+    image: ChickenjoyWFries,
+    desc: "Philippines’ best-tasting crispylicious, juicylicious Chickenjoy with crispy-sarap fries.",
+  },
+];
 
 const ChickenJoy = () => {
   return (
