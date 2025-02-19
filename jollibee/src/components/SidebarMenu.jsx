@@ -144,6 +144,46 @@ const SidebarMenu = () => {
               <span className="ml-5 font-bold">Burgers</span>
             </NavLink>
           </li>
+          {/* Jolly Spag */}
+          <li>
+            <NavLink
+              to="/JollySpag"
+              className={({ isActive }) =>
+                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
+                  isActive
+                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
+                    : "text-black/80 hover:bg-white hover:scale-105"
+                }`
+              }
+            >
+              <img
+                src={JollySpag}
+                alt="New Products"
+                className="w-16 h-16 object-cover rounded-lg shadow-sm"
+              />
+              <span className="ml-5 font-bold">Jolly Spaghetti</span>
+            </NavLink>
+          </li>
+          {/* Burger Steak */}
+          <li>
+            <NavLink
+              to="/BurgerSteak"
+              className={({ isActive }) =>
+                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
+                  isActive
+                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
+                    : "text-black/80 hover:bg-white hover:scale-105"
+                }`
+              }
+            >
+              <img
+                src={BurgerSteak}
+                alt="New Products"
+                className="w-16 h-16 object-cover rounded-lg shadow-sm"
+              />
+              <span className="ml-5 font-bold">Burger Steak</span>
+            </NavLink>
+          </li>
         </ul>
       </div>
     </aside>
