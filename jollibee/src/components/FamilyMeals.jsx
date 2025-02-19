@@ -54,6 +54,12 @@ const menuItems = [
     image: FamilyDuo,
     desc: "Your meatiest, cheesiest and sweet-sarap Jolly Spaghetti Family Pan paired with the classic favorite Palabok Family Pan",
   },
+  {
+    name: "Jolly Spaghetti Family Pan",
+    image: PlatterSpag,
+    desc: "Your favorite meatiest,cheesiest sweet-sarap Jolly Spaghetti good for sharing with the whole family! Good for 4-5 pax.",
+  },
+  
 ];
 
 const FamilyMeals = () => {
