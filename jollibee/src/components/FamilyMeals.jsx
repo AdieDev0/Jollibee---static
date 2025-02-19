@@ -24,6 +24,36 @@ const menuItems = [
     image: FamilyBurgerSteak,
     desc: "A platter of 100% pure beef patty with a hearty serving of flavorful mushroom gravy, good for 6.",
   },
+  {
+    name: "Burger Bundle",
+    image: BurgerBundle,
+    desc: "3 Burgers, 3 Regular Fries, and 3 Regular Drinks.",
+  },
+  {
+    name: "Yumburger Family Savers",
+    image: YumBurgerFamilySavers,
+    desc: "Jollibee Yumburger Family Savers has all your favorite snacks in one! This includes your favorite beefy langhap-sarap Yumburger and Jolly Crispy Fries. Good for three.",
+  },
+  {
+    name: "Peach Mango Pie 6 Pies-To-Go",
+    image: SweetPies,
+    desc: "6 pieces of Peach Mango Pie",
+  },
+  {
+    name: "6 - pc. Chickenjoy",
+    image: SixChickenJoySolo,
+    desc: "A bucket of your favorite crispylicious, juicylicious Chickenjoy!",
+  },
+  {
+    name: "Chickenjoy Bucket w/ Rice, Jolly Spaghetti, & Drinks",
+    image: BucketChicken,
+    desc: "A bucket of the Philippines’ best-tasting crispylicious, juicylicious Chickenjoy with Jolly Spaghetti, rice and drinks.",
+  },
+  {
+    name: "Family Pan Duo",
+    image: FamilyDuo,
+    desc: "Your meatiest, cheesiest and sweet-sarap Jolly Spaghetti Family Pan paired with the classic favorite Palabok Family Pan",
+  },
 ];
 
 const FamilyMeals = () => {
