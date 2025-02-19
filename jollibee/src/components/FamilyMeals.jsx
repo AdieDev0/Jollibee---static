@@ -64,6 +64,10 @@ const menuItems = [
     image: PlatterPalabok,
     desc: "Your classic favorite saucy-sarap Palabok with tasty toppings for sharing with the whole family! Good for 4-5 pax.Your favorite meatiest,cheesiest sweet-sarap Jolly Spaghetti good for sharing with the whole family! Good for 4-5 pax.",
   },
+  {
+    name: "Joy At Home Birthday Set",
+    image: PlatterPalabok,
+  },
 ];
 
 const FamilyMeals = () => {
