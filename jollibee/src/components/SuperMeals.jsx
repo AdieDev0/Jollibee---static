@@ -1,14 +1,20 @@
 import React from "react";
 import SidebarMenu from "./SidebarMenu";
+import OneSuperMeal from "../assets/Menu/SuperMeals/OneSuperMeal.webp";
+import TwoSuperMeal from "../assets/Menu/SuperMeals/TwoSuperMeal.webp";
 
-const menuItems [
+const menuItems = [
   {
     name: "1 - pc. Chickenjoy w/ Burger Steak & Half Jolly Spaghetti Super Meal",
-    image: ,
+    image: OneSuperMeal,
     desc: "Your Jollibee favorites in one Supermeal: 1pc Chickenjoy with Burger Steak and Half Jolly Spaghetti, with rice and drink.",
   },
-
-],
+  {
+    name: "Yumburger, Half Jolly Spaghetti & Reg. Fries Super Meal​",
+    image: TwoSuperMeal,
+    desc: "Your Jollibee favorites in one Supermeal: Yumbuerger with Half Jolly Spaghetti, with fries and drink.",
+  },
+];
 
 const SuperMeals = () => {
   return (
