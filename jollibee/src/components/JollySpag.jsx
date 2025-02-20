@@ -28,6 +28,16 @@ const menuItems = [
     image: JollySpaghettiFriesDrink,
     desc: "The meatiest, cheesiest and sweet-sarap spaghetti! Freshly prepared noodles topped with Jollibee’s signature meaty spaghetti sauce, hotdog chunks and creamy grated cheese! Served with drink.",
   },
+  {
+    name: "Jolly Spaghetti w/ Burger Steak",
+    image: SpagBurgerSteak,
+    desc: "The meatiest, cheesiest and sweet-sarap spaghetti! Freshly prepared noodles topped with Jollibee’s signature meaty spaghetti sauce, hotdog chunks and creamy grated cheese, paired with our Beefy-Saucy Burger Steak.",
+  },
+  {
+    name: "Jolly Spaghetti w/ Yumburger",
+    image: SpaghettiYumburger,
+    desc: "The meatiest, cheesiest and sweet-sarap spaghetti! Freshly prepared noodles topped with Jollibee’s signature meaty spaghetti sauce, hotdog chunks and creamy grated cheese, paired with your favorite langhap-sarap Yumburger with 100% beef patty and special burger dressing.",
+  },
 ];
 
 const JollySpag = () => {
