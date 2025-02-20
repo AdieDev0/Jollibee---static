@@ -1,13 +1,34 @@
 import React from "react";
 import SidebarMenu from "./SidebarMenu";
+import ChickenSpag from "../assets/Menu/Spaghetti/ChickenSpag.webp";
+import JollySpaghettiFamily from "../assets/Menu/Spaghetti/JollySpaghettiFamily.webp";
+import JollySpaghettiFriesDrink from "../assets/Menu/Spaghetti/JollySpaghettiFriesDrink.webp";
+import JollySpaghettiSolo from "../assets/Menu/Spaghetti/JollySpaghettiSolo.webp";
+import SpagBurgerSteak from "../assets/Menu/Spaghetti/SpagBurgerSteak.webp";
+import SpaghettiYumburger from "../assets/Menu/Spaghetti/SpaghettiYumburger.webp";
 
 const menuItems = [
   {
     name: "Jolly Spaghetti",
-    image: "https://jollibee.com.ph/uploads/products/jolly-spaghetti.png",
-    desc: "A serving "
+    image: JollySpaghettiSolo,
+    desc: "The meatiest, cheesiest and sweet-sarap spaghetti! Freshly prepared noodles topped with Jollibee’s signature meaty spaghetti sauce, hotdog chunks and creamy grated cheese.",
   },
-]
+  {
+    name: "Jolly Spaghetti Family Pan",
+    image: JollySpaghettiFamily,
+    desc: "Your meatiest, cheesiest and sweet-sarap Jolly Spaghetti Family Pan.",
+  },
+  {
+    name: "Chickenjoy Bucket with Jolly Spaghetti Family Pan",
+    image: ChickenSpag,
+    desc: "Philippines’ best-tasting crispylicious, juicylicious Chickenjoy with the meatiest, cheesiest, sweet-sarap Jolly Spaghetti!",
+  },
+  {
+    name: "Jolly Spaghetti w/ Fries & Drink",
+    image: JollySpaghettiFriesDrink,
+    desc: "The meatiest, cheesiest and sweet-sarap spaghetti! Freshly prepared noodles topped with Jollibee’s signature meaty spaghetti sauce, hotdog chunks and creamy grated cheese! Served with drink.",
+  },
+];
 
 const JollySpag = () => {
   return (
