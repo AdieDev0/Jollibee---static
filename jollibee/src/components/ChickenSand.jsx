@@ -1,5 +1,17 @@
 import React from "react";
 import SidebarMenu from "../components/SidebarMenu";
+import ChickenDrinkFries from '../assets/Menu/ChickenSandwich/ChickenDrinkFries.webp'
+import ChickenSupreme from '../assets/Menu/ChickenSandwich/ChickenSupreme.webp'
+import SandwichSupremeFries from '../assets/Menu/ChickenSandwich/SandwichSupremeFries.webp'
+import SoloSpicy from '../assets/Menu/ChickenSandwich/SoloSpicy.webp'
+
+const menuItems = [
+  {
+    name: "",
+    image: ,
+    desc: "", 
+  },
+],
 const ChickenSand = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
