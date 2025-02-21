@@ -11,12 +11,27 @@ const menuItems = [
     image: SoupMacaroni,
     desc: "Creamy flavorful broth with elbow macaroni with diced chicken, ham bits and vegetables.",
   },
+  {
+    name: "Gravy",
+    image: Gravy,
+    desc: "Chickenjoy Gravy.",
+  },
+  {
+    name: "Jolly Crispy Fries",
+    image: FriesJabee,
+    desc: "Crispy-sarap fries in every bite.",
+  },
+  {
+    name: "Plain White Rice",
+    image: Rice,
+    desc: "Extra Rice.",
+  },
 ];
 
 const Fries = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
-        {/* Sidebar */}
+      {/* Sidebar */}
       <div className="w-1/5 min-w-[250px] bg-white shadow-xl hidden lg:block sticky top-0 h-screen">
         <SidebarMenu />
       </div>
