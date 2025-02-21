@@ -4,8 +4,11 @@ import { FaAngleDown, FaBars } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [promoOpen, setPromoOpen] = useState(false);
 
   return (
     <nav className="bg-[#D6001C] px-6 md:px-44 py-5 md:py-3 flex justify-end items-center border-b-4 border-b-yellow-500 sticky z-50 top-0">
@@ -20,22 +23,15 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <ul className="hidden md:flex justify-end items-center gap-8">
         <NavLink to="/delivery">
-          <li className="text-lg font-bold text-white cursor-pointer">
-            Delivery
-          </li>
+          <li className="text-lg font-bold text-white cursor-pointer">Delivery</li>
         </NavLink>
-
-        <li className="text-lg font-bold text-white cursor-pointer">
-          Location
-        </li>
-
+        <li className="text-lg font-bold text-white cursor-pointer">Location</li>
+        
         {/* Dropdown Menus */}
         <DropdownMenu title="Menu">
           <MenuItem>
-            <NavLink to="/ViewMenu">
-              <a href="#" className="block px-4 py-2 text-gray-700">
-                View Menu
-              </a>
+            <NavLink to="/ViewMenu" className="block px-4 py-2 text-gray-700">
+              View Menu
             </NavLink>
           </MenuItem>
           <MenuItem>
@@ -47,14 +43,10 @@ const Navbar = () => {
 
         <DropdownMenu title="Promotion">
           <MenuItem>
-            <a href="#" className="block px-4 py-2 text-gray-700">
-              Promos
-            </a>
+            <a href="#" className="block px-4 py-2 text-gray-700">Promos</a>
           </MenuItem>
           <MenuItem>
-            <a href="#" className="block px-4 py-2 text-gray-700">
-              Gift Cards
-            </a>
+            <a href="#" className="block px-4 py-2 text-gray-700">Gift Cards</a>
           </MenuItem>
         </DropdownMenu>
 
@@ -79,10 +71,34 @@ const Navbar = () => {
               <IoMdClose className="w-6 h-6" />
             </button>
             <ul className="flex flex-col gap-4 mt-10">
-              <li className="text-lg font-bold cursor-pointer">Delivery</li>
+              <NavLink to="/delivery">
+                <li className="text-lg font-bold cursor-pointer">Delivery</li>
+              </NavLink>
               <li className="text-lg font-bold cursor-pointer">Location</li>
-              <li className="text-lg font-bold cursor-pointer">Menu</li>
-              <li className="text-lg font-bold cursor-pointer">Promotion</li>
+              
+              {/* Mobile Dropdown Menus */}
+              <li>
+                <button onClick={() => setMenuOpen(!menuOpen)} className="flex justify-between items-center w-full text-lg font-bold">
+                  Menu <FaAngleDown className={`ml-2 ${menuOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {menuOpen && (
+                  <ul className="pl-4 mt-2 space-y-2">
+                    <NavLink to="/ViewMenu" className="block text-gray-700">View Menu</NavLink>
+                    <li className="text-gray-700">Multi-Delivery</li>
+                  </ul>
+                )}
+              </li>
+              <li>
+                <button onClick={() => setPromoOpen(!promoOpen)} className="flex justify-between items-center w-full text-lg font-bold">
+                  Promotion <FaAngleDown className={`ml-2 ${promoOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {promoOpen && (
+                  <ul className="pl-4 mt-2 space-y-2">
+                    <li className="text-gray-700">Promos</li>
+                    <li className="text-gray-700">Gift Cards</li>
+                  </ul>
+                )}
+              </li>
               <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-lg rounded-full px-6 py-3 shadow-lg cursor-pointer">
                 Order Now
               </button>
