@@ -1,17 +1,32 @@
 import React from "react";
 import SidebarMenu from "../components/SidebarMenu";
-import ChickenDrinkFries from '../assets/Menu/ChickenSandwich/ChickenDrinkFries.webp'
-import ChickenSupreme from '../assets/Menu/ChickenSandwich/ChickenSupreme.webp'
-import SandwichSupremeFries from '../assets/Menu/ChickenSandwich/SandwichSupremeFries.webp'
-import SoloSpicy from '../assets/Menu/ChickenSandwich/SoloSpicy.webp'
+import ChickenDrinkFries from "../assets/Menu/ChickenSandwich/ChickenDrinkFries.webp";
+import ChickenSupreme from "../assets/Menu/ChickenSandwich/ChickenSupreme.webp";
+import SandwichSupremeFries from "../assets/Menu/ChickenSandwich/SandwichSupremeFries.webp";
+import SoloSpicy from "../assets/Menu/ChickenSandwich/SoloSpicy.webp";
 
 const menuItems = [
   {
-    name: "",
-    image: ,
-    desc: "", 
+    name: "Spicy Chicken Sandwich Supreme",
+    image: SoloSpicy,
+    desc: "Large. Crunch. Spicy Thigh Fillet",
   },
-],
+  {
+    name: "Spicy Chicken Sandwich Supreme w/ Fries & Drink",
+    image: SandwichSupremeFries,
+    desc: "Large. Crunch. Spicy Thigh Fillet",
+  },
+  {
+    name: "Chicken Sandwich Supreme",
+    image: ChickenSupreme,
+    desc: "Large. Crunch. Spicy Thigh Fillet",
+  },
+  {
+    name: "Chicken Sandwich Supreme w/ Fries & Drink",
+    image: ChickenDrinkFries,
+    desc: "Large. Crunch. Spicy Thigh Fillet",
+  },
+];
 const ChickenSand = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
