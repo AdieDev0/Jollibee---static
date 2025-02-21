@@ -1,5 +1,68 @@
 import React from "react";
 import SidebarMenu from "./SidebarMenu";
+import Coke from "../assets/Menu/Beverage/Coke.webp";
+import CokeFloat from "../assets/Menu/Beverage/CokeFloat.webp";
+import CokeZero from "../assets/Menu/Beverage/CokeZero.webp";
+import HotChoc from "../assets/Menu/Beverage/HotChoc.webp";
+import HotCoffee from "../assets/Menu/Beverage/HotCoffee.webp";
+import IcedTea from "../assets/Menu/Beverage/IcedTea.webp";
+import Pineapple from "../assets/Menu/Beverage/Pineapple.webp";
+import Royal from "../assets/Menu/Beverage/Royal.webp";
+import Sarsi from "../assets/Menu/Beverage/Sarsi.webp";
+import Sprite from "../assets/Menu/Beverage/Sprite.webp";
+
+const menuItems = [
+  {
+    name: "Coffee",
+    image: HotCoffee,
+    desc: "Freshly brewed coffee with a balance of strong coffee taste, milk taste and just the right sweetness",
+  },
+  {
+    name: "Coke",
+    image: Coke,
+    desc: "Refreshing, ice-cold Coke to perfectly match your favorite meal",
+  },
+  {
+    name: "Coke Float",
+    image: CokeFloat,
+    desc: "Coke soda topped with creamy vanilla soft serve and rich, indulgent chocolate syrup",
+  },
+  {
+    name: "Coke Zero",
+    image: CokeZero,
+    desc: "Refreshing, ice-cold Coke Zero to perfectly match your favorite meal",
+  },
+  {
+    name: "Hot Chocolate",
+    image: HotChoc,
+    desc: "Hot, rich and creamy chocolate drink.",
+  },
+  {
+    name: "Iced Tea",
+    image: IcedTea,
+    desc: "Delicous, ice-cold lemon flavored Iced Tea that will definitely complement any meal",
+  },
+  {
+    name: "Pineapple Juice",
+    image: Pineapple,
+    desc: "Natural pineapple juice drink for those looking for a healthy alternative",
+  },
+  {
+    name: "Royal",
+    image: Royal,
+    desc: "Refreshing, ice-cold Royal to perfectly match your favorite meal",
+  },
+  {
+    name: "Sarsi",
+    image: Sarsi,
+    desc: "Refreshing, ice-cold Sarsi to perfectly match your favorite meal",
+  },
+  {
+    name: "Sprite",
+    image: Sprite,
+    desc: "Refreshing, ice-cold Sprite to perfectly match your favorite meal",
+  },
+];
 
 const Beverage = () => {
   return (
@@ -12,7 +75,7 @@ const Beverage = () => {
       {/* Main Content */}
       <div className="flex-1 p-6 md:p-12">
         <p className="text-center font-extrabold text-4xl font-oswald text-black/80 mb-12">
-          Super Meals
+          Beverage
         </p>
 
         {/* Responsive Grid */}
