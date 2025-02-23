@@ -35,16 +35,16 @@ const Promos = () => {
         </p>
 
         {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center px-40">
           {menuItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-md"
+              className="bg-white rounded-lg overflow-hidden w-full max-w-md"
             >
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-64 object-cover rounded-t-lg"
+                className="w-full h-full object-cover rounded-t-lg"
               />
               <div className="p-4 text-center">
                 <h2 className="text-xl font-bold text-black">{item.name}</h2>
@@ -56,6 +56,8 @@ const Promos = () => {
           ))}
         </div>
       </div>
+
+      {/*  */}
     </div>
   );
 };
