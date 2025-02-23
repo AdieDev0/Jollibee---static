@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 import JanJoys from "../assets/Promos/JanJoys.jpg";
 import JoyZone from "../assets/Promos/JoyZone.jpg";
 import JTreats from "../assets/Promos/JTreats.jpg";
@@ -57,7 +58,8 @@ const Promos = () => {
         </div>
       </div>
 
-      {/*  */}
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
