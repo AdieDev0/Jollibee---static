@@ -1,4 +1,11 @@
 import React from "react";
+import JanJoys from "../assets/Promos/JanJoys.jpg";
+import JoyZone from "../assets/Promos/JoyZone.jpg";
+import JTreats from "../assets/Promos/JTreats.jpg";
+import KidsParty from "../assets/Promos/KidsParty.jpg";
+import MixMatch from "../assets/Promos/MixMatch.jpg";
+import Vday from "../assets/Promos/Vday.jpg";
+import Vvibes from "../assets/Promos/Vvibes.jpg";
 
 const Promos = () => {
   return (
@@ -20,11 +27,8 @@ const Promos = () => {
           and freebies!
         </p>
 
-
         {/* Cards */}
-        <div>
-          
-        </div>
+        <div></div>
       </div>
     </div>
   );
