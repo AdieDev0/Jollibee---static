@@ -23,10 +23,14 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <ul className="hidden md:flex justify-end items-center gap-8">
         <NavLink to="/delivery">
-          <li className="text-lg font-bold text-white cursor-pointer">Delivery</li>
+          <li className="text-lg font-bold text-white cursor-pointer">
+            Delivery
+          </li>
         </NavLink>
-        <li className="text-lg font-bold text-white cursor-pointer">Location</li>
-        
+        <li className="text-lg font-bold text-white cursor-pointer">
+          Location
+        </li>
+
         {/* Dropdown Menus */}
         <DropdownMenu title="Menu">
           <MenuItem>
@@ -43,10 +47,18 @@ const Navbar = () => {
 
         <DropdownMenu title="Promotion">
           <MenuItem>
-            <a href="#" className="block px-4 py-2 text-gray-700">Promos</a>
+            <NavLink to="/Promos">
+              <a href="#" className="block px-4 py-2 text-gray-700">
+                Promos
+              </a>
+            </NavLink>
           </MenuItem>
           <MenuItem>
-            <a href="#" className="block px-4 py-2 text-gray-700">Gift Cards</a>
+            <NavLink to="GiftCard">
+              <a href="#" className="block px-4 py-2 text-gray-700">
+                Gift Cards
+              </a>
+            </NavLink>
           </MenuItem>
         </DropdownMenu>
 
@@ -75,27 +87,45 @@ const Navbar = () => {
                 <li className="text-lg font-bold cursor-pointer">Delivery</li>
               </NavLink>
               <li className="text-lg font-bold cursor-pointer">Location</li>
-              
+
               {/* Mobile Dropdown Menus */}
               <li>
-                <button onClick={() => setMenuOpen(!menuOpen)} className="flex justify-between items-center w-full text-lg font-bold">
-                  Menu <FaAngleDown className={`ml-2 ${menuOpen ? 'rotate-180' : ''}`} />
+                <button
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  className="flex justify-between items-center w-full text-lg font-bold"
+                >
+                  Menu{" "}
+                  <FaAngleDown
+                    className={`ml-2 ${menuOpen ? "rotate-180" : ""}`}
+                  />
                 </button>
                 {menuOpen && (
                   <ul className="pl-4 mt-2 space-y-2">
-                    <NavLink to="/ViewMenu" className="block text-gray-700">View Menu</NavLink>
+                    <NavLink to="/ViewMenu" className="block text-gray-700">
+                      View Menu
+                    </NavLink>
                     <li className="text-gray-700">Multi-Delivery</li>
                   </ul>
                 )}
               </li>
               <li>
-                <button onClick={() => setPromoOpen(!promoOpen)} className="flex justify-between items-center w-full text-lg font-bold">
-                  Promotion <FaAngleDown className={`ml-2 ${promoOpen ? 'rotate-180' : ''}`} />
+                <button
+                  onClick={() => setPromoOpen(!promoOpen)}
+                  className="flex justify-between items-center w-full text-lg font-bold"
+                >
+                  Promotion{" "}
+                  <FaAngleDown
+                    className={`ml-2 ${promoOpen ? "rotate-180" : ""}`}
+                  />
                 </button>
                 {promoOpen && (
                   <ul className="pl-4 mt-2 space-y-2">
-                    <li className="text-gray-700">Promos</li>
-                    <li className="text-gray-700">Gift Cards</li>
+                    <NavLink to="/Promos">
+                      <li className="text-gray-700">Promos</li>
+                    </NavLink>
+                    <NavLink to="/GiftCard">
+                      <li className="text-gray-700">Gift Cards</li>
+                    </NavLink>
                   </ul>
                 )}
               </li>
