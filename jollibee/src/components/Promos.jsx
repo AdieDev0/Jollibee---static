@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import JanJoys from "../assets/Promos/JanJoys.jpg";
 import JoyZone from "../assets/Promos/JoyZone.jpg";
@@ -38,9 +39,11 @@ const Promos = () => {
         {/* Cards Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center px-40">
           {menuItems.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-lg overflow-hidden w-full max-w-md"
+              className="bg-white rounded-lg overflow-hidden w-full max-w-md shadow-md"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
               <img
                 src={item.image}
@@ -53,7 +56,7 @@ const Promos = () => {
                   Learn More
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
