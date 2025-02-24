@@ -12,7 +12,7 @@ const GiftCard = () => {
 
       <div className="flex gap-10 items-center">
         <img src={Egifts} alt="" />
-        <div>
+        <div className="grid gap-5">
           <p className="text-4xl font-bold font-roboto text-red-600">Jolly e-Gifts</p>
           <h1>
             A digital platform where customers can conveniently send electronic
