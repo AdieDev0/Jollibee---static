@@ -10,7 +10,7 @@ const GiftCard = () => {
         </p>
       </div>
 
-      <div>
+      <div className="flex gap-10 items-center">
         <img src={Egifts} alt="" />
         <div>
           <p>Jolly e-Gifts</p>
