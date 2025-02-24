@@ -13,7 +13,7 @@ const GiftCard = () => {
       <div className="flex gap-10 items-center">
         <img src={Egifts} alt="" />
         <div>
-          <p>Jolly e-Gifts</p>
+          <p className="text-4xl font-bold font-roboto text-red-600">Jolly e-Gifts</p>
           <h1>
             A digital platform where customers can conveniently send electronic
             gift codes to family and friends. Jolly e-Gifts are available in the
@@ -21,7 +21,7 @@ const GiftCard = () => {
             redeemed at any Jollibee store. Send a joyful treat on any special
             occasion.
           </h1>
-          <div>
+          <div className="flex gap-5">
             <button>Buy e-Gift Certificates</button>
             <button>Buy e-Product Vouchers</button>
           </div>
