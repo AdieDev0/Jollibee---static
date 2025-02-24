@@ -23,7 +23,7 @@ import JollySpag from "./components/JollySpag";
 import KiddieMeal from "./components/KiddieMeal";
 import Palabok from "./components/Palabok";
 import SuperMeals from "./components/SuperMeals";
-import Egifts from "./components/Egifts";
+
 
 const App = () => {
   return (
@@ -53,7 +53,7 @@ const App = () => {
         <Route path="/NewProduct" element={<NewProduct />} />
         <Route path="/Palabok" element={<Palabok />} />
         <Route path="/SuperMeals" element={<SuperMeals />} />
-        <Route path="/Egifts" element={<Egifts />} />
+
       </Routes>
     </Router>
   );
