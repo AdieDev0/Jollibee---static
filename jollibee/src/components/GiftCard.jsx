@@ -2,7 +2,11 @@ import React from 'react'
 
 const GiftCard = () => {
   return (
-    <div>GiftCard</div>
+    <div>
+       <div className="bg-red-600 p-12 text-center">
+        <p className="text-white font-bold text-5xl font-roboto">Jolly e-Gifts</p>
+      </div>
+    </div>
   )
 }
 
