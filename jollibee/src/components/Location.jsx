@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import NotFound from "./NotFound";
 
 const Location = () => {
   return (
-    <div>Location</div>
-  )
-}
+    <div>
+      <NotFound />
+    </div>
+  );
+};
 
-export default Location
+export default Location;

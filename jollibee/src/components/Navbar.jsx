@@ -27,9 +27,11 @@ const Navbar = () => {
             Delivery
           </li>
         </NavLink>
-        <li className="text-lg font-bold text-white cursor-pointer">
-          Location
-        </li>
+        <NavLink to="/location">
+          <li className="text-lg font-bold text-white cursor-pointer">
+            Location
+          </li>
+        </NavLink>
 
         {/* Dropdown Menus */}
         <DropdownMenu title="Menu">
@@ -86,7 +88,9 @@ const Navbar = () => {
               <NavLink to="/delivery">
                 <li className="text-lg font-bold cursor-pointer">Delivery</li>
               </NavLink>
-              <li className="text-lg font-bold cursor-pointer">Location</li>
+              <NavLink to="/location">
+                <li className="text-lg font-bold cursor-pointer">Location</li>
+              </NavLink>
 
               {/* Mobile Dropdown Menus */}
               <li>
