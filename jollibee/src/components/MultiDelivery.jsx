@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import NotFound from "./NotFound";
 
 const MultiDelivery = () => {
   return (
-    <div>MultiDelivery</div>
-  )
-}
+    <div>
+      <NotFound />
+    </div>
+  );
+};
 
-export default MultiDelivery
+export default MultiDelivery;

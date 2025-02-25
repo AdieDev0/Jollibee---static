@@ -41,9 +41,11 @@ const Navbar = () => {
             </NavLink>
           </MenuItem>
           <MenuItem>
-            <button className="block w-full text-left px-4 py-2 text-gray-700">
-              Multi-Delivery
-            </button>
+            <NavLink to="/MultiDelivery">
+              <button className="block w-full text-left px-4 py-2 text-gray-700 cursor-pointer">
+                Multi-Delivery
+              </button>
+            </NavLink>
           </MenuItem>
         </DropdownMenu>
 
@@ -108,7 +110,11 @@ const Navbar = () => {
                     <NavLink to="/ViewMenu" className="block text-gray-700">
                       View Menu
                     </NavLink>
-                    <li className="text-gray-700">Multi-Delivery</li>
+                    <NavLink to="/MultiDelivery">
+                      <li className="text-gray-700 cursor-pointer">
+                        Multi-Delivery
+                      </li>
+                    </NavLink>
                   </ul>
                 )}
               </li>
