@@ -1,9 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import BucketChicken from "../assets/Menu/FamilyMeals/BucketChicken.webp";
 import BurgerBundle from "../assets/Menu/FamilyMeals/BurgerBundle.png";
 import FamilyBurgerSteak from "../assets/Menu/FamilyMeals/FamilyBurgerSteak.png";
-import FamilyCheeseBurger from "../assets/Menu/FamilyMeals/FamilyCheeseBurger.webp";
 import FamilyDuo from "../assets/Menu/FamilyMeals/FamilyDuo.webp";
 import FourPieces from "../assets/Menu/FamilyMeals/FourPieces.webp";
 import JoyAtHome from "../assets/Menu/FamilyMeals/JoyAtHome.webp";
@@ -57,16 +57,17 @@ const menuItems = [
   {
     name: "Jolly Spaghetti Family Pan",
     image: PlatterSpag,
-    desc: "Your favorite meatiest,cheesiest sweet-sarap Jolly Spaghetti good for sharing with the whole family! Good for 4-5 pax.",
+    desc: "Your favorite meatiest, cheesiest sweet-sarap Jolly Spaghetti good for sharing with the whole family! Good for 4-5 pax.",
   },
   {
     name: "Palabok Family Pan",
     image: PlatterPalabok,
-    desc: "Your classic favorite saucy-sarap Palabok with tasty toppings for sharing with the whole family! Good for 4-5 pax.Your favorite meatiest,cheesiest sweet-sarap Jolly Spaghetti good for sharing with the whole family! Good for 4-5 pax.",
+    desc: "Your classic favorite saucy-sarap Palabok with tasty toppings for sharing with the whole family! Good for 4-5 pax.",
   },
   {
     name: "Joy At Home Birthday Set",
     image: JoyAtHome,
+    desc: "A special birthday meal set featuring Chickenjoy, spaghetti, drinks, and a sweet dessert, perfect for celebrations at home!",
   },
 ];
 
@@ -87,9 +88,13 @@ const FamilyMeals = () => {
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {menuItems.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white border-2 border-yellow-500 rounded-2xl shadow-lg p-6 text-center relative hover:shadow-2xl transition-all transform hover:-translate-y-2"
+              className="bg-white border-2 border-yellow-500 rounded-2xl shadow-lg p-6 text-center relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
             >
               {/* Image */}
               <img
@@ -105,10 +110,14 @@ const FamilyMeals = () => {
               </div>
 
               {/* Order Now Button */}
-              <button className="mt-5 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition duration-300">
+              <motion.button
+                className="mt-5 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+              >
                 Order Now
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           ))}
         </div>
       </div>
