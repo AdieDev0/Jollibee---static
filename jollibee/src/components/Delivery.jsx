@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 import New from "../assets/New/DeliverySection.webp";
 import group from "../assets/New/group.webp";
 import apple from "../assets/2022/downloadMobile/Apple-Store-Badge.png";
@@ -11,6 +12,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import Footer from "./Footer";
+
 // Icon component for the Accordion
 function Icon({ id, open }) {
   return (
@@ -38,19 +40,41 @@ const Delivery = () => {
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
+  // Animation variants for Framer Motion
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const stagger = {
+    visible: { transition: { staggerChildren: 0.2 } },
+  };
+
   return (
     <>
       {/* Header Section */}
-      <div className="w-full bg-red-600 p-4 md:p-11">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        className="w-full bg-red-600 p-4 md:p-11"
+      >
         <h1 className="text-center text-3xl md:text-5xl font-roboto font-bold text-white">
           Jollibee Delivery
         </h1>
-      </div>
+      </motion.div>
 
       {/* Delivery Section */}
-      <div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={stagger}
+      >
         <div className="flex flex-col md:flex-row px-4 md:px-60 pt-10 md:pt-20 mb-10 gap-6 md:gap-20">
-          <div className="items-center grid gap-2 relative">
+          <motion.div
+            variants={fadeInUp}
+            className="items-center grid gap-2 relative"
+          >
             {/* Offset Background Shape */}
             <div className="absolute top-5 md:top-20 right-10 md:right-20 h-28 md:h-55 w-40 md:w-100 bg-orange-400 rounded-2xl"></div>
             {/* Image */}
@@ -59,8 +83,8 @@ const Delivery = () => {
               alt="Jollibee Delivery"
               className="rounded-xl relative"
             />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeInUp}>
             <h1 className="font-bold text-2xl md:text-3xl text-red-600 mb-6 md:mb-10">
               Delivery
             </h1>
@@ -70,17 +94,29 @@ const Delivery = () => {
               app. Satisfy your cravings and have your Jollibee favorites
               delivered right to your doorstep!
             </p>
-            <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-2xl rounded-3xl px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-6 cursor-pointer">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-2xl rounded-3xl px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-6 cursor-pointer"
+            >
               Order Now
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Cards Section */}
-      <div className="bg-[#FFEAB8] p-6 md:p-10 flex flex-col md:flex-row justify-center gap-6 md:gap-10">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={stagger}
+        className="bg-[#FFEAB8] p-6 md:p-10 flex flex-col md:flex-row justify-center gap-6 md:gap-10"
+      >
         {/* 1st Card */}
-        <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
+        <motion.div
+          variants={fadeInUp}
+          className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden"
+        >
           <div className="p-10">
             <img
               src={DownloadApp}
@@ -100,9 +136,12 @@ const Delivery = () => {
               <img src={google} alt="Google Play" className="w-20 md:w-40" />
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* 2nd Card */}
-        <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
+        <motion.div
+          variants={fadeInUp}
+          className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden"
+        >
           <div className="p-10">
             <img
               src={EightSeven}
@@ -117,13 +156,20 @@ const Delivery = () => {
               Jollibee delivery is just a call away! Call #87000 to order your
               Jollibee favorites! Don’t forget the hashtag!
             </p>
-            <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-xl rounded-full px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-6 cursor-pointer mx-auto block">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-xl rounded-full px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-6 cursor-pointer mx-auto block"
+            >
               #87000
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
         {/* 3rd Card */}
-        <div className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
+        <motion.div
+          variants={fadeInUp}
+          className="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden"
+        >
           <div className="p-10">
             <img
               src={group}
@@ -138,79 +184,94 @@ const Delivery = () => {
               Order your Jollibee favorites and send to multiple recipients and
               addresses.
             </p>
-            <button className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-xl rounded-full px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-14 cursor-pointer mx-auto block">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-orange-400 hover:bg-orange-500 duration-300 text-white font-bold text-xl md:text-xl rounded-full px-6 md:px-8 py-3 md:py-4 shadow-lg mt-4 md:mt-14 cursor-pointer mx-auto block"
+            >
               Order for Multi-Delivery
-            </button>
+            </motion.button>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Accordion Section */}
-      <div className="container mx-auto px-4 md:px-60 py-10">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={stagger}
+        className="container mx-auto px-4 md:px-60 py-10"
+      >
         <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-8 text-center">
           Frequently Asked Questions (FAQs)
         </h2>
         <div className="space-y-4">
           {/* Accordion 1 */}
-          <Accordion
-            open={open === 1}
-            icon={<Icon id={1} open={open} />}
-            className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
-          >
-            <AccordionHeader
-              onClick={() => handleOpen(1)}
-              className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+          <motion.div variants={fadeInUp}>
+            <Accordion
+              open={open === 1}
+              icon={<Icon id={1} open={open} />}
+              className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
             >
-              What is Jollibee Delivery?
-            </AccordionHeader>
-            <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
-              Jollibee Delivery is a service that allows you to order your
-              favorite Jollibee meals online or via phone and have them
-              delivered straight to your doorstep.
-            </AccordionBody>
-          </Accordion>
+              <AccordionHeader
+                onClick={() => handleOpen(1)}
+                className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+              >
+                What is Jollibee Delivery?
+              </AccordionHeader>
+              <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
+                Jollibee Delivery is a service that allows you to order your
+                favorite Jollibee meals online or via phone and have them
+                delivered straight to your doorstep.
+              </AccordionBody>
+            </Accordion>
+          </motion.div>
 
           {/* Accordion 2 */}
-          <Accordion
-            open={open === 2}
-            icon={<Icon id={2} open={open} />}
-            className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
-          >
-            <AccordionHeader
-              onClick={() => handleOpen(2)}
-              className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+          <motion.div variants={fadeInUp}>
+            <Accordion
+              open={open === 2}
+              icon={<Icon id={2} open={open} />}
+              className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
             >
-              How can I place an order?
-            </AccordionHeader>
-            <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
-              You can place an order by calling #87000, using the Jollibee app,
-              or visiting JollibeeDelivery.com.
-            </AccordionBody>
-          </Accordion>
+              <AccordionHeader
+                onClick={() => handleOpen(2)}
+                className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+              >
+                How can I place an order?
+              </AccordionHeader>
+              <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
+                You can place an order by calling #87000, using the Jollibee app,
+                or visiting JollibeeDelivery.com.
+              </AccordionBody>
+            </Accordion>
+          </motion.div>
 
           {/* Accordion 3 */}
-          <Accordion
-            open={open === 3}
-            icon={<Icon id={3} open={open} />}
-            className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
-          >
-            <AccordionHeader
-              onClick={() => handleOpen(3)}
-              className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+          <motion.div variants={fadeInUp}>
+            <Accordion
+              open={open === 3}
+              icon={<Icon id={3} open={open} />}
+              className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 bg-gradient-to-r from-orange-50 to-orange-100"
             >
-              What payment methods are accepted?
-            </AccordionHeader>
-            <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
-              We accept cash on delivery, credit/debit cards, and digital
-              wallets like GCash and PayMaya.
-            </AccordionBody>
-          </Accordion>
+              <AccordionHeader
+                onClick={() => handleOpen(3)}
+                className="px-6 py-4 text-left text-lg md:text-xl font-semibold text-gray-800 hover:text-red-600 transition-colors flex items-center"
+              >
+                What payment methods are accepted?
+              </AccordionHeader>
+              <AccordionBody className="px-6 py-4 text-base md:text-lg text-gray-700 bg-white rounded-b-xl">
+                We accept cash on delivery, credit/debit cards, and digital
+                wallets like GCash and PayMaya.
+              </AccordionBody>
+            </Accordion>
+          </motion.div>
         </div>
 
         <h1 className="underline font-bold text-red-600 hover:text-red-700 duration-200 text-xl text-center mt-20 cursor-pointer">
           More Question & Answer
         </h1>
-      </div>
+      </motion.div>
 
       <Footer />
     </>
