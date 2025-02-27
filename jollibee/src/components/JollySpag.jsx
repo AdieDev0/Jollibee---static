@@ -6,6 +6,7 @@ import JollySpaghettiFriesDrink from "../assets/Menu/Spaghetti/JollySpaghettiFri
 import JollySpaghettiSolo from "../assets/Menu/Spaghetti/JollySpaghettiSolo.webp";
 import SpagBurgerSteak from "../assets/Menu/Spaghetti/SpagBurgerSteak.webp";
 import SpaghettiYumburger from "../assets/Menu/Spaghetti/SpaghettiYumburger.webp";
+import { motion } from "framer-motion";
 
 const menuItems = [
   {
