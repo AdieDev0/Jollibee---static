@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import SidebarMenu from "../components/SidebarMenu";
 import FriesJabee from "../assets/Menu/FriesSide/FriesJabee.webp";
 import Gravy from "../assets/Menu/FriesSide/Gravy.webp";
@@ -9,7 +10,7 @@ const menuItems = [
   {
     name: "Creamy Macaroni Soup",
     image: SoupMacaroni,
-    desc: "Creamy flavorful broth with elbow macaroni with diced chicken, ham bits and vegetables.",
+    desc: "Creamy flavorful broth with elbow macaroni, diced chicken, ham bits, and vegetables.",
   },
   {
     name: "Gravy",
@@ -45,9 +46,13 @@ const Fries = () => {
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {menuItems.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white border-2 border-yellow-500 rounded-2xl shadow-lg p-6 text-center relative hover:shadow-2xl transition-all transform hover:-translate-y-2"
+              className="bg-white border-2 border-yellow-500 rounded-2xl shadow-lg p-6 text-center relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
             >
               {/* Image */}
               <img
@@ -63,10 +68,14 @@ const Fries = () => {
               </div>
 
               {/* Order Now Button */}
-              <button className="mt-5 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition duration-300">
+              <motion.button
+                className="mt-5 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+              >
                 Order Now
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           ))}
         </div>
       </div>
