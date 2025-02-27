@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import Coke from "../assets/Menu/Beverage/Coke.webp";
 import CokeFloat from "../assets/Menu/Beverage/CokeFloat.webp";
@@ -40,7 +41,7 @@ const menuItems = [
   {
     name: "Iced Tea",
     image: IcedTea,
-    desc: "Delicous, ice-cold lemon flavored Iced Tea that will definitely complement any meal",
+    desc: "Delicious, ice-cold lemon flavored Iced Tea that will definitely complement any meal",
   },
   {
     name: "Pineapple Juice",
@@ -81,9 +82,13 @@ const Beverage = () => {
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {menuItems.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white border-2 border-yellow-500 rounded-2xl shadow-lg p-6 text-center relative hover:shadow-2xl transition-all transform hover:-translate-y-2"
+              className="bg-white border-2 border-yellow-500 rounded-2xl shadow-lg p-6 text-center relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
             >
               {/* Image */}
               <img
@@ -99,10 +104,14 @@ const Beverage = () => {
               </div>
 
               {/* Order Now Button */}
-              <button className="mt-5 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition duration-300">
+              <motion.button
+                className="mt-5 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+              >
                 Order Now
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           ))}
         </div>
       </div>
