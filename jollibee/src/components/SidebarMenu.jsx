@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion"; // Import Framer Motion
 // IMAGE
 import BestSelling from "../assets/Menu/BestSelling.webp";
 import Beverage from "../assets/Menu/Beverage.webp";
@@ -19,334 +20,83 @@ import Palabok from "../assets/Menu/Palabok.png";
 import SuperMeals from "../assets/Menu/SuperMeals.webp";
 
 const SidebarMenu = () => {
+  // Animation variants for the sidebar
+  const sidebarVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
+  };
+
+  // Animation variants for menu items
+  const menuItemVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
-    <aside className="w-full md:w-80 bg-orange-50 shadow-lg h-screen fixed left-0 top-0 overflow-y-auto">
+    <motion.aside
+      className="w-full md:w-80 bg-orange-50 shadow-lg h-screen fixed left-0 top-0 overflow-y-auto"
+      variants={sidebarVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="p-4">
         <h2 className="text-2xl font-bold text-red-600 mb-6">Menu</h2>
         <ul className="space-y-5 py-5">
-          {/* BestSelling */}
-          <li>
-            <NavLink
-              to="/ViewMenu"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
+          {[
+            { image: BestSelling, name: "Best Selling", to: "/ViewMenu" },
+            { image: NewProducts, name: "New Products", to: "/NewProduct" },
+            { image: FamilyMeals, name: "Family Meals", to: "/FamilyMeals" },
+            { image: Breakfast, name: "Breakfast", to: "/Breakfast" },
+            { image: ChickenJoy, name: "Chickenjoy", to: "/ChickenJoy" },
+            { image: Burger, name: "Burgers", to: "/Burger" },
+            { image: JollySpag, name: "Jolly Spaghetti", to: "/JollySpag" },
+            { image: BurgerSteak, name: "Burger Steak", to: "/BurgerSteak" },
+            { image: SuperMeals, name: "Super Meals", to: "/SuperMeals" },
+            {
+              image: ChickenSandwich,
+              name: "Chicken Sandwich",
+              to: "/ChickenSand",
+            },
+            {
+              image: JollyHotdog,
+              name: "Jolly Hotdog & Pies",
+              to: "/JollyPies",
+            },
+            { image: Palabok, name: "Palabok", to: "/Palabok" },
+            { image: Fries, name: "Fries & Sides", to: "/Fries" },
+            { image: Dessert, name: "Desserts", to: "/Dessert" },
+            { image: Beverage, name: "Beverage", to: "/Beverage" },
+            { image: JollyKid, name: "Jolly Kiddie Meals", to: "/KiddieMeal" },
+          ].map((item, index) => (
+            <motion.li
+              key={index}
+              variants={menuItemVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <img
-                src={BestSelling}
-                alt="Best Selling"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Best Selling</span>
-            </NavLink>
-          </li>
-          {/* NewProduct */}
-          <li>
-            <NavLink
-              to="/NewProduct"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={NewProducts}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">New Products</span>
-            </NavLink>
-          </li>
-          {/* FamilyMeals */}
-          <li>
-            <NavLink
-              to="/FamilyMeals"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={FamilyMeals}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Family Meals</span>
-            </NavLink>
-          </li>
-          {/* Breakfast */}
-          <li>
-            <NavLink
-              to="/Breakfast"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={Breakfast}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Breakfast</span>
-            </NavLink>
-          </li>
-          {/* Chicken Joy */}
-          <li>
-            <NavLink
-              to="/ChickenJoy"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={ChickenJoy}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Chickenjoy</span>
-            </NavLink>
-          </li>
-          {/* Burgers */}
-          <li>
-            <NavLink
-              to="/Burger"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={Burger}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Burgers</span>
-            </NavLink>
-          </li>
-          {/* Jolly Spag */}
-          <li>
-            <NavLink
-              to="/JollySpag"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={JollySpag}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Jolly Spaghetti</span>
-            </NavLink>
-          </li>
-          {/* Burger Steak */}
-          <li>
-            <NavLink
-              to="/BurgerSteak"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={BurgerSteak}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Burger Steak</span>
-            </NavLink>
-          </li>
-          {/* Super Meals */}
-          <li>
-            <NavLink
-              to="/SuperMeals"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={SuperMeals}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Super Meals</span>
-            </NavLink>
-          </li>
-          {/* Chicken Sandwich */}
-          <li>
-            <NavLink
-              to="/ChickenSand"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={ChickenSandwich}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Chicken Sandwich</span>
-            </NavLink>
-          </li>
-          {/* Jolly Hotdog & Fries */}
-          <li>
-            <NavLink
-              to="/JollyPies"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={JollyHotdog}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Jolly Hotdog & Pies</span>
-            </NavLink>
-          </li>
-          {/* Palabok */}
-          <li>
-            <NavLink
-              to="/Palabok"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={Palabok}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Palabok</span>
-            </NavLink>
-          </li>
-          {/* Fries & Sides */}
-          <li>
-            <NavLink
-              to="/Fries"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={Fries}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Fries & Sides</span>
-            </NavLink>
-          </li>
-          {/* Desserts */}
-          <li>
-            <NavLink
-              to="/Dessert"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={Dessert}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Desserts</span>
-            </NavLink>
-          </li>
-          {/* Beverage */}
-          <li>
-            <NavLink
-              to="/Beverage"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={Beverage}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Beverage</span>
-            </NavLink>
-          </li>
-          {/* Jolly Kiddie Meal */}
-          <li>
-            <NavLink
-              to="/KiddieMeal"
-              className={({ isActive }) =>
-                `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
-                  isActive
-                    ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
-                    : "text-black/80 hover:bg-white hover:scale-105"
-                }`
-              }
-            >
-              <img
-                src={JollyKid}
-                alt="New Products"
-                className="w-16 h-16 object-cover rounded-lg shadow-sm"
-              />
-              <span className="ml-5 font-bold">Jolly Kiddie Meals</span>
-            </NavLink>
-          </li>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  `flex items-center p-3 font-semibold text-lg rounded-lg transition-all duration-200 transform ${
+                    isActive
+                      ? "bg-white text-black scale-105 shadow-md border-l-8 border-yellow-500"
+                      : "text-black/80 hover:bg-white hover:scale-105"
+                  }`
+                }
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-16 h-16 object-cover rounded-lg shadow-sm"
+                />
+                <span className="ml-5 font-bold">{item.name}</span>
+              </NavLink>
+            </motion.li>
+          ))}
         </ul>
       </div>
-    </aside>
+    </motion.aside>
   );
 };
 
