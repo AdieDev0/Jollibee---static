@@ -19,29 +19,66 @@ const menuItems = [
   { image: KidsParty, name: "Jollibee Kids Party" },
 ];
 
+// Animation variants for staggered card animations
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // Stagger the animation of children
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Promos = () => {
   return (
     <div>
       {/* Promos Header */}
-      <div className="bg-red-600 p-12 text-center">
+      <motion.div
+        className="bg-red-600 p-12 text-center"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <p className="text-white font-bold text-5xl font-roboto">Promos</p>
-      </div>
+      </motion.div>
 
       <div className="bg-white p-10">
-        <h1 className="text-4xl font-roboto font-bold text-center text-red-600 mb-6">
+        <motion.h1
+          className="text-4xl font-roboto font-bold text-center text-red-600 mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
           Jollibee Promo
-        </h1>
-        <p className="text-center text-gray-700 font-roboto mb-10">
+        </motion.h1>
+        <motion.p
+          className="text-center text-gray-700 font-roboto mb-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+        >
           Get more JOY with these exciting promos! Take advantage of these
           exclusive and limited-time offers to get big discounts and freebies!
-        </p>
+        </motion.p>
 
         {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center px-40">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center px-40"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {menuItems.map((item, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-lg overflow-hidden w-full max-w-md shadow-md"
+              variants={cardVariants}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
@@ -58,7 +95,7 @@ const Promos = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Footer */}
